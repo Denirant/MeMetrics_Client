@@ -1,0 +1,35 @@
+<svg width="186" height="106" viewBox="0 0 186 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_1280_118073)">
+    <rect width="186" height="106" rx="4" fill="#F9FAFB"/>
+    <path d="M0 2.63039C0 1.17766 1.17766 0 2.63039 0H183.37C184.822 0 186 1.17766 186 2.63039V11H0V2.63039Z" fill="#E8E8E8"/>
+    <rect x="5" y="3" width="4" height="4" rx="2" fill="white"/>
+    <rect x="47" y="16" width="21" height="4" rx="1.31519" fill="#E8E8E8"/>
+    <rect x="70" y="16" width="21" height="4" rx="1.31519" fill="#E8E8E8"/>
+    <rect x="92" y="16" width="21" height="4" rx="1.31519" fill="#E8E8E8"/>
+    <rect x="160" y="16" width="21" height="4" rx="1.31519" fill="#4876F9"/>
+    <rect x="5" y="16" width="37" height="86" rx="1.31519" fill="#E8E8E8"/>
+    <rect x="47" y="23" width="134" height="14" rx="1.31519" fill="#E8E8E8"/>
+    <rect x="47" y="40" width="134" height="62" rx="1.31519" fill="#E8E8E8"/>
+    <rect x="13" y="3" width="4" height="4" rx="2" fill="white"/>
+    <rect x="21" y="3" width="4" height="4" rx="2" fill="white"/>
+    </g>
+    <rect x="0.486347" y="0.486347" width="185.027" height="105.027" rx="3.51365" stroke="#E8E8E8" stroke-width="0.972695"/>
+    <g clip-path="url(#clip1_1280_118073)">
+    <rect x="2" width="184" height="106" rx="4" fill="#272727"/>
+    <path d="M2 2.63039C2 1.17766 3.17766 0 4.63039 0H183.37C184.822 0 186 1.17766 186 2.63039V11H2V2.63039Z" fill="#6C7074"/>
+    <rect x="94" y="16" width="21" height="4" rx="1.31519" fill="#6C7074"/>
+    <rect x="162" y="16" width="21" height="4" rx="1.31519" fill="#4876F9"/>
+    <rect x="49" y="23" width="134" height="14" rx="1.31519" fill="#6C7074"/>
+    <rect x="49" y="40" width="134" height="62" rx="1.31519" fill="#6C7074"/>
+    </g>
+    <path d="M94.4863 0.486347H182C183.941 0.486347 185.514 2.05946 185.514 4V102C185.514 103.941 183.941 105.514 182 105.514H94.4863V0.486347Z" stroke="#474747" stroke-width="0.972695"/>
+    <defs>
+    <clipPath id="clip0_1280_118073">
+    <rect width="186" height="106" rx="4" fill="white"/>
+    </clipPath>
+    <clipPath id="clip1_1280_118073">
+    <path d="M94 0H182C184.209 0 186 1.79086 186 4V102C186 104.209 184.209 106 182 106H94V0Z" fill="white"/>
+    </clipPath>
+    </defs>
+    </svg>
+    

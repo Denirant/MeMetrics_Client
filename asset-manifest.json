@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MeMetricsClient/static/css/main.77afca80.css",
-    "main.js": "/MeMetricsClient/static/js/main.b5e7f3a3.js",
+    "main.js": "/MeMetricsClient/static/js/main.59accc90.js",
     "static/media/emptyCompanies.jpg": "/MeMetricsClient/static/media/emptyCompanies.a3670c2e1632c6677b29.jpg",
     "static/media/Ellipse 701.svg": "/MeMetricsClient/static/media/Ellipse 701.ffe171b04ef5f4481d6a3012812f4f95.svg",
     "static/media/logo-1.svg": "/MeMetricsClient/static/media/logo-1.7b7c21c4921004fb5b1f50ba8aa8f6f2.svg",
@@ -145,10 +145,10 @@
     "static/media/CatBlue.svg": "/MeMetricsClient/static/media/CatBlue.0b1460bb57e2e5172353.svg",
     "static/media/NotComplete.svg": "/MeMetricsClient/static/media/NotComplete.da7a9954340cd4fbd1c694ee6de85520.svg",
     "main.77afca80.css.map": "/MeMetricsClient/static/css/main.77afca80.css.map",
-    "main.b5e7f3a3.js.map": "/MeMetricsClient/static/js/main.b5e7f3a3.js.map"
+    "main.59accc90.js.map": "/MeMetricsClient/static/js/main.59accc90.js.map"
   },
   "entrypoints": [
     "static/css/main.77afca80.css",
-    "static/js/main.b5e7f3a3.js"
+    "static/js/main.59accc90.js"
   ]
 }

@@ -79,7 +79,7 @@ const WorkerListCheck = ({ items }) => {
               />
               <img
                 className="worker_checks-list_item-image"
-                src={"http://localhost:8080/" + item.image}
+                src={"https://memetricsserver.onrender.com" + item.image}
                 alt="person_image"
                 width={32}
                 height={32}

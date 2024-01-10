@@ -13,7 +13,7 @@ const ForgotPassword = () => {
         e.preventDefault();
         
         try{
-            const url = 'http://localhost:8080/api/users/reset_check';
+            const url = 'https://memetricsserver.onrender.comapi/users/reset_check';
             const {data} = await axios.post(url, {email});
             setSuccess(data.message);
             setError('')

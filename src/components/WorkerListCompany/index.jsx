@@ -88,7 +88,7 @@ const EmployeeTable = ({ employees }) => {
         <tbody>
           {filteredAndSortedEmployees.map((employee, index) => (
             <tr key={index}>
-              <td> <img src={`http://localhost:8080/${employee.image}`} alt="" /> {employee.name} {employee.surname}</td>
+              <td> <img src={`https://memetricsserver.onrender.com${employee.image}`} alt="" /> {employee.name} {employee.surname}</td>
               <td>{employee.position}</td>
               <td>
               <Dropdown

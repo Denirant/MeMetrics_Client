@@ -32,7 +32,7 @@ export default function SideNavigation({activeNumber}) {
     useEffect(() => {
         const getCompanies = async() => {
             try{
-                const url = `http://localhost:8080/api/companies/list`;
+                const url = `https://memetricsserver.onrender.comapi/companies/list`;
                 const {data: res} = await axios.get(url, {params: {id: localStorage.getItem('id')}});
                 setCompanies(res.data);
             }catch(error){

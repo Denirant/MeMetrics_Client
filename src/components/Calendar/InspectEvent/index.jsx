@@ -221,7 +221,7 @@ function EventInspect({
                   width={24}
                   height={24}
                   style={{ borderRadius: "50%", objectFit: "cover" }}
-                  src={`http://localhost:8080/${people[0].image}`}
+                  src={`https://memetricsserver.onrender.com${people[0].image}`}
                   alt="user_icon"
                 />
                 {people[0].name}
@@ -266,7 +266,7 @@ function EventInspect({
               <h2 className="inspect_content__item-title">Owner</h2>
               <p className="inspect_content__item-text">
                 <img
-                  src={`http://localhost:8080/${owner.image}`}
+                  src={`https://memetricsserver.onrender.com${owner.image}`}
                   alt="icon_header"
                   width={24}
                   height={24}

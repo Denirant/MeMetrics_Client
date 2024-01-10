@@ -13,7 +13,7 @@ const Tags = ({list}) => {
         event.preventDefault();
 
         try {
-            await axios.delete(`http://localhost:8080/product/${params.id}/tag/${event.currentTarget.parentNode.innerText}/remove`);
+            await axios.delete(`https://memetricsserver.onrender.comproduct/${params.id}/tag/${event.currentTarget.parentNode.innerText}/remove`);
             window.location.reload();
         } catch (error) {
             console.log(error);

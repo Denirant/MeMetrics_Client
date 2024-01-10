@@ -18,7 +18,7 @@ function MultipleEdit({ data, handleClose, handleRemove }) {
                     htmlFor="worker_phone"
                     className="company_add_search__label"
                   >
-                    <img src={'http://localhost:8080/' + user.image} alt="icon worker" width={40} height={40} />
+                    <img src={'https://memetricsserver.onrender.com' + user.image} alt="icon worker" width={40} height={40} />
                     <h1 className="worker_header">
                         {user.name} {user.surname}
                       <span className="worker_position">{user.position}</span>

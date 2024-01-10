@@ -26,7 +26,7 @@ const Signin = ({handleClose, handleSwitch}) => {
 
     async function generateCode(id){
         try{	
-            const {data: res} = await axios.get('http://localhost:8080/api/users/OTP', {params: {id: id}});
+            const {data: res} = await axios.get('https://memetricsserver.onrender.comapi/users/OTP', {params: {id: id}});
 
             alert(res.message);
         }catch(error){
@@ -42,7 +42,7 @@ const Signin = ({handleClose, handleSwitch}) => {
     const handleSubmit = async(event) => {
         event.preventDefault();
         try{
-            const url = 'http://localhost:8080/api/users/login';
+            const url = 'https://memetricsserver.onrender.comapi/users/login';
             const {data: res} = await axios.post(url, data);
 
             localStorage.setItem('token', res.data);
@@ -59,7 +59,7 @@ const Signin = ({handleClose, handleSwitch}) => {
                 if(error.response.data.message === 'Invalid Email or Password!'){
 
                     try{
-                        const url = 'http://localhost:8080/api/workers/login';
+                        const url = 'https://memetricsserver.onrender.comapi/workers/login';
                         const {data: res} = await axios.post(url, data);
             
                         // записываем jwt token  в локальное хранилище

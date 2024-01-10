@@ -29,7 +29,7 @@ export default function AddWorker({handleClose}) {
 
 
 
-            await axios.post('http://localhost:8080/api/workers/', formData, {
+            await axios.post('https://memetricsserver.onrender.comapi/workers/', formData, {
                 headers: {
                     "content-type": "application/json",
                     "Content-type": "multipart/form-data",
@@ -70,7 +70,7 @@ export default function AddWorker({handleClose}) {
     useEffect(() => {
         const getCompanies = async() => {
             try{
-                const url = `http://localhost:8080/api/companies/list`;
+                const url = `https://memetricsserver.onrender.comapi/companies/list`;
                 const {data: res} = await axios.get(url, {params: {id: localStorage.getItem('id')}});
 
                 let data = res.data.map(

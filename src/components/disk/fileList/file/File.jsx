@@ -98,7 +98,7 @@ const File = ({ file, handleSelectFile }) => {
         const fileExtensions = ["jpg", "png", "bmp", "gif", "tif", "jpeg"];
 
         if (fileExtensions.includes(file.type)) {
-            handleSelectFile(`http://localhost:8080/files/${file.user}/${file.path}`)
+            handleSelectFile(`https://memetricsserver.onrender.comfiles/${file.user}/${file.path}`)
         } else {
           dispatch(generateNotification('Action', 'top center', 'Cant open file with this type', 'Error'))
         }    

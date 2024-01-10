@@ -65,7 +65,7 @@ const AddChart = ({onClose}) => {
 
     async function searchShops(brand, nomination){
         try{
-            const {data: res} = await axios.post('http://localhost:8080/charts/lineChart/get/shops', {nomination: nomination, brand: brand, email: localStorage.getItem('email')})
+            const {data: res} = await axios.post('https://memetricsserver.onrender.comcharts/lineChart/get/shops', {nomination: nomination, brand: brand, email: localStorage.getItem('email')})
 
             setShops(res.array)
         }catch(error){
@@ -118,7 +118,7 @@ const AddChart = ({onClose}) => {
                 markets: inputEls.current.filter((element) => element.getStatus()).map((element) => element.getName().shop + ' ' + element.getName().color)
             }
 
-            const {data: res} = await axios.post('http://localhost:8080/charts/lineChart/add', data);
+            const {data: res} = await axios.post('https://memetricsserver.onrender.comcharts/lineChart/add', data);
 
             toaster.push(
                 message(res.message.status, res.message.title, res.message.text), 

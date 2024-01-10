@@ -14,7 +14,7 @@ const GoogleAuth = () => {
             };
         
         try{
-            const {data:res} = await axios.post('http://localhost:8080/api/users/googleAuth', user);
+            const {data:res} = await axios.post('https://memetricsserver.onrender.comapi/users/googleAuth', user);
             localStorage.setItem('token', res.data);
             localStorage.setItem('id', res.id);
 

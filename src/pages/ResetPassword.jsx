@@ -23,7 +23,7 @@ const ResetPassword = () => {
             token: params.token
         }
     }
-    const url = `http://localhost:8080/api/users/reset`
+    const url = `https://memetricsserver.onrender.comapi/users/reset`
     
     const navigate = useNavigate();
 

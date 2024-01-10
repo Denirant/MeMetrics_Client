@@ -13,7 +13,7 @@ export const createTodoApi = async (title, start, end) => {
       const token = localStorage.getItem('token');
     
       try {
-        const response = await axios.post('http://localhost:8080/api/todos', data, {
+        const response = await axios.post('https://memetricsserver.onrender.comapi/todos', data, {
             headers: {
               Authorization: `Bearer ${token}`, // Предполагается, что вы используете токен авторизации
             },
@@ -30,7 +30,7 @@ export const getAllTodoApi = async () => {
         const token = localStorage.getItem('token');
     
       try {
-        const response = await axios.get('http://localhost:8080/api/todos', {
+        const response = await axios.get('https://memetricsserver.onrender.comapi/todos', {
             headers: {
               Authorization: `Bearer ${token}`, // Предполагается, что вы используете токен авторизации
             },
@@ -47,7 +47,7 @@ export const markTodoAsComplateApi = async (id) => {
     const token = localStorage.getItem('token');
     
       try {
-        const response = await axios.patch(`http://localhost:8080/api/todos/${id}/complete`, {}, {
+        const response = await axios.patch(`https://memetricsserver.onrender.comapi/todos/${id}/complete`, {}, {
             headers: {
               Authorization: `Bearer ${token}`, // Предполагается, что вы используете токен авторизации
             },
@@ -70,7 +70,7 @@ export const editTodoApi = async (id, title, start, end) => {
     
     
       try {
-        const response = await axios.put(`http://localhost:8080/api/todos/${id}`, data, {
+        const response = await axios.put(`https://memetricsserver.onrender.comapi/todos/${id}`, data, {
             headers: {
               Authorization: `Bearer ${token}`, // Предполагается, что вы используете токен авторизации
             },
@@ -87,7 +87,7 @@ export const deleteTodoApi = async (id) => {
     const token = localStorage.getItem('token');
     
     try {
-        const response = await axios.delete(`http://localhost:8080/api/todos/${id}`, {
+        const response = await axios.delete(`https://memetricsserver.onrender.comapi/todos/${id}`, {
             headers: {
               Authorization: `Bearer ${token}`, // Предполагается, что вы используете токен авторизации
             },

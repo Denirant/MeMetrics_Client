@@ -89,7 +89,7 @@ const HorizontalCalendar = ({ handleAddEvent }) => {
 
   const getEvents = async () => {
     try {
-      const url = `http://localhost:8080/api/tasks/company`;
+      const url = `https://memetricsserver.onrender.comapi/tasks/company`;
       const { data: res } = await axios.get(url, {
         params: { id: params.id },
         headers: {
@@ -551,7 +551,7 @@ const HorizontalCalendar = ({ handleAddEvent }) => {
                       className="event-field-aside-image"
                     >
                       <img
-                        src={`http://localhost:8080/${elem.image}`}
+                        src={`https://memetricsserver.onrender.com${elem.image}`}
                         alt="worker on task"
                       />
                     </li>
@@ -567,7 +567,7 @@ const HorizontalCalendar = ({ handleAddEvent }) => {
                       className="event-field-aside-image"
                     >
                       <img
-                        src={`http://localhost:8080/${elem.image}`}
+                        src={`https://memetricsserver.onrender.com${elem.image}`}
                         alt="worker on task"
                       />
                     </li>
@@ -813,7 +813,7 @@ const HorizontalCalendar = ({ handleAddEvent }) => {
                                 className="event-field-aside-image"
                               >
                                 <img
-                                  src={`http://localhost:8080/${elem.image}`}
+                                  src={`https://memetricsserver.onrender.com${elem.image}`}
                                   alt="worker on task"
                                 />
                               </li>

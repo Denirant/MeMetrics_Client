@@ -77,7 +77,7 @@ const SelectMembers = ({ data, onChange }) => {
         <ul className="dropdown-list">
           {filterItems(inputValue).map((item) => (
             <li key={item.id} onClick={() => handleItemClick(item)}>
-                <img width={32} height={32} style={{objectFit: 'cover', borderRadius: '50%'}} src={`http://localhost:8080/${item.image}`} alt='icon user'/>
+                <img width={32} height={32} style={{objectFit: 'cover', borderRadius: '50%'}} src={`https://memetricsserver.onrender.com${item.image}`} alt='icon user'/>
                 <p>{item.name} {item.surname} <span>{item.position}</span></p>
             </li>
           ))}

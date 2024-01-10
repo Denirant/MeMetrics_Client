@@ -20,7 +20,7 @@ const WorkerEmailVerify = () => {
                     }
                 }
                 
-                const url = `http://localhost:8080/api/workers/verify`;
+                const url = `https://memetricsserver.onrender.comapi/workers/verify`;
 
                 const {data: res} = await axios.get(url, config);
                 console.log(res);

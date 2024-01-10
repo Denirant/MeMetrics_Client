@@ -40,7 +40,7 @@ const Signup = ({handleClose, handleSwitch}) => {
         event.preventDefault();
         setError('')
         try{
-            const url = `http://localhost:8080/api/users/register`;
+            const url = `https://memetricsserver.onrender.comapi/users/register`;
             const {data: res} = await axios.post(url, data);
             setSuccess(res.message);
             setTimeout(() => {

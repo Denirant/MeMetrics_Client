@@ -19,7 +19,7 @@ export default function UpdateWorker({handleClose, name, surname, email, title, 
     const handleWorkerCreate = async (event) => {
         event.preventDefault();
         try{
-            await axios.post('http://localhost:8080/api/workers/', inputs)
+            await axios.post('https://memetricsserver.onrender.comapi/workers/', inputs)
 
             handleClose();
         }catch(error){
@@ -55,7 +55,7 @@ export default function UpdateWorker({handleClose, name, surname, email, title, 
     useEffect(() => {
         const getCompanies = async() => {
             try{
-                const url = `http://localhost:8080/api/companies/list`;
+                const url = `https://memetricsserver.onrender.comapi/companies/list`;
                 const {data: res} = await axios.get(url, {params: {id: localStorage.getItem('id')}});
 
                 let data = res.data.map(

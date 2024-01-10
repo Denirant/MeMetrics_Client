@@ -278,7 +278,7 @@ const WorkerPage = () => {
   useEffect(() => {
     const getWorkers = async () => {
       try {
-        const url = `http://localhost:8080/api/workers/list`;
+        const url = `https://memetricsserver.onrender.comapi/workers/list`;
         const { data: res } = await axios.get(url, {
           params: { id: localStorage.getItem("id") },
         });

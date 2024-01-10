@@ -24,7 +24,7 @@
               />
               <img
                 className="worker_checks-list_item-image"
-                src={"http://localhost:8080/" + item.image}
+                src={"https://memetricsserver.onrender.com" + item.image}
                 alt="person_image"
               />
               <div className="worker_checks-list_item-info">

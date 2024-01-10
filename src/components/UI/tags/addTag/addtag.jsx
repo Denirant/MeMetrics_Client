@@ -20,7 +20,7 @@ const AddTag = () => {
         // alert(event.key);
         if(event.key === 'Enter'){
             try{
-                await axios.put(`http://localhost:8080/product/${params.id}/tags/add`, {tag: value})
+                await axios.put(`https://memetricsserver.onrender.comproduct/${params.id}/tags/add`, {tag: value})
             }catch(error){
                 console.log(error);
             }

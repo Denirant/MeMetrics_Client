@@ -40,7 +40,7 @@ const MatrixCharts = ({id, name, brand, unit}) => {
 
             item = item.getName();
 
-            const {data: res} = await axios.post(`http://localhost:8080/product/${id}/suggetions/${action}`, item)
+            const {data: res} = await axios.post(`https://memetricsserver.onrender.comproduct/${id}/suggetions/${action}`, item)
 
             console.log(res.message);
 
@@ -53,7 +53,7 @@ const MatrixCharts = ({id, name, brand, unit}) => {
 
     async function searchItems(){
         try{
-            const {data: res} = await axios.post(`http://localhost:8080/product/${id}/find/suggetions`, { name: name, brand: brand });
+            const {data: res} = await axios.post(`https://memetricsserver.onrender.comproduct/${id}/find/suggetions`, { name: name, brand: brand });
 
             console.log(res)
 

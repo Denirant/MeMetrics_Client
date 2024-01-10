@@ -49,7 +49,7 @@ const AddCompany = ({ handleClose }) => {
   const addCompanyHandle = async (event) => {
     if (event.target) {
       try {
-        const url = "http://localhost:8080/api/companies/add";
+        const url = "https://memetricsserver.onrender.comapi/companies/add";
         const info = new FormData();
         info.append("name", name);
         info.append("legalForm", data?.name?.full_with_opf);

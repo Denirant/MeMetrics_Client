@@ -68,7 +68,7 @@ function EditWorker({ handleClose, handleTree, data, department, manager }) {
 
   const fileInput = useRef(null);
   const [imagePreview, setImagePreview] = useState(
-    "http://localhost:8080/" + data.image
+    "https://memetricsserver.onrender.com" + data.image
   );
 
   const [departmentName, setDepartmentName] = useState("");

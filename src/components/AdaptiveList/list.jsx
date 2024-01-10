@@ -52,7 +52,7 @@ const List = () => {
 
   const handleDelete = async(event, id) => {
     try{
-      const url = `http://localhost:8080/api/workers/`;
+      const url = `https://memetricsserver.onrender.comapi/workers/`;
       await axios.delete(url, {params: {id: id}});
     }catch(error){
       console.log(error);
@@ -66,7 +66,7 @@ const List = () => {
         const company = params.id;
         console.log(company);
 
-        const url = `http://localhost:8080/api/workers/companyList`;
+        const url = `https://memetricsserver.onrender.comapi/workers/companyList`;
         const {data: res} = await axios.get(url, {params: {headId: localStorage.getItem('id'), companyId: company}});
 
         console.log(res.array)

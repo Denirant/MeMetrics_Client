@@ -58,7 +58,7 @@ const ShowCompanies = () => {
   useEffect(() => {
     const getCompanies = async () => {
       try {
-        const url = `http://localhost:8080/api/companies/list`;
+        const url = `https://memetricsserver.onrender.comapi/companies/list`;
         const { data: res } = await axios.get(url, {
           params: { id: localStorage.getItem("id") },
         });
@@ -96,7 +96,7 @@ const ShowCompanies = () => {
         await Promise.all(
           data.map(async (id) => {
             const { data: res } = await axios.delete(
-              `http://localhost:8080/api/companies/delete/`,
+              `https://memetricsserver.onrender.comapi/companies/delete/`,
               { params: { userId: localStorage.getItem("id"), companyId: id } }
             );
           })
@@ -121,7 +121,7 @@ const ShowCompanies = () => {
 
       if (isDelete) {
         const { data: res } = await axios.delete(
-          `http://localhost:8080/api/companies/delete/`,
+          `https://memetricsserver.onrender.comapi/companies/delete/`,
           { params: { userId: localStorage.getItem("id"), companyId: companyObj.id } }
         );
 

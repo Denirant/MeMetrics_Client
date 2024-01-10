@@ -7,7 +7,7 @@ export default function Worker() {
   useEffect(() => {
     const updateOnlineStatus = async () => {
       console.log('Online')
-      await axios.post('http://localhost:8080/api/workers/online', {id: localStorage.getItem('id')})
+      await axios.post('https://memetricsserver.onrender.comapi/workers/online', {id: localStorage.getItem('id')})
     };
 
     updateOnlineStatus();

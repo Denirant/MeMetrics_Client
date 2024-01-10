@@ -1,0 +1,104 @@
+/* <div className='disk_navigation'>
+            <div className='dis_navigation-folder-control'>
+                <ul className='navigation_list'>
+                    <li onClick={handleCreateFolder} className='navigation_list-item'>
+                        <img className='navigation_btn navigation_btn-blue' src={Delete} alt="icon" />
+                        <p>Create folder</p>
+                    </li>
+                    <li onClick={handleDeleteFolder} className='navigation_list-item'>
+                        <img className='navigation_btn navigation_btn' src={Move} alt="icon" />
+                        <p>Delete folder</p>
+                    </li>
+                    <li onClick={handleMoveFolder} className='navigation_list-item'>
+                        <img className='navigation_btn navigation_btn' src={Create} alt="icon" />
+                        <p>Move folder</p>
+                    </li>
+                </ul>
+            </div>
+            <DiskSearch/>
+        </div> */
+
+
+.disk_navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 100%;
+}
+
+
+.navigation_list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+
+    list-style: none;
+    margin: 0;
+}
+
+
+.navigation_list-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--btn-secondary-default, #d4d4d4);
+
+    cursor: pointer;
+
+    opacity: 1;
+
+    transition: all .15s ease-in-out;
+
+    user-select: none;
+}
+
+.navigation_list-item.inactive{
+    opacity: .6;
+    border-color: rgb(170, 170, 170);
+}
+
+.navigation_list-item:hover{
+    opacity: .75;
+    border: 1px solid var(--btn-secondary-default, #cbcbcb);
+}
+
+
+.navigation_list-item.blue{
+    border-radius: 8px;
+    background: var(--btn-primary-default, #4876F9);
+    border: 1px solid var(--btn-secondary-default, #4876F9) !important;
+}
+
+
+.navigation_list-item p{
+    width: fit-content;
+    color: var(--txt-primary, #1C1C1C);
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: 0.28px;
+
+    white-space: nowrap;
+
+    display: inline-block;
+
+    margin-bottom: 0px !important;
+}
+
+.navigation_list-item.blue p{
+    color: var(--txt-btn-primary, #FFF);
+}
+
+
+.navigation_list-item img{
+    width: 18px;
+    height: 18px;
+}

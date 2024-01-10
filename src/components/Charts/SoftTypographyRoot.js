@@ -1,0 +1,56 @@
+import Typography from "@mui/material/Typography";
+import { styled } from "@mui/material/styles";
+
+import hexToRgb from "./hexToRgb";
+import LinearGradient from "./linearGradient";
+import pxToRem from "./pxToRem";
+import rgba from "./rgba";
+import borders from "./borders";
+
+export default styled(Typography)(({ theme, ownerState }) => {
+
+    const functions = {
+        LinearGradient,
+      }
+    
+      const {borderRadius} = {...borders};
+
+  const { palette, typography } = theme;
+  const { color, textTransform, verticalAlign, fontWeight, opacity, textGradient } = ownerState;
+
+  const { gradients, transparent } = palette;
+  const { fontWeightLight, fontWeightRegular, fontWeightMedium, fontWeightBold } = typography;
+  const { linearGradient } = functions;
+  
+
+  // fontWeight styles
+  const fontWeights = {
+    light: fontWeightLight,
+    regular: fontWeightRegular,
+    medium: fontWeightMedium,
+    bold: fontWeightBold,
+  };
+
+  // styles for the typography with textGradient={true}
+  const gradientStyles = () => ({
+    backgroundImage:
+      color !== "inherit" && color !== "text" && color !== "white" && gradients[color]
+        ? linearGradient(gradients[color].main, gradients[color].state)
+        : linearGradient(gradients.dark.main, gradients.dark.state),
+    display: "inline-block",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: transparent.main,
+    position: "relative",
+    zIndex: 1,
+  });
+
+  return {
+    opacity,
+    textTransform,
+    verticalAlign,
+    textDecoration: "none",
+    color: color === "inherit" || !palette[color] ? "inherit" : palette[color].main,
+    fontWeight: fontWeights[fontWeight] && fontWeights[fontWeight],
+    ...(textGradient && gradientStyles()),
+  };
+});

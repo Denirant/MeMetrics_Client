@@ -1,0 +1,83 @@
+.path-container {
+    font-family: "SF Pro Text", "Myriad Set Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    color: black;
+    display: flex;
+    align-items: center;
+
+    margin: 20px 0px;
+
+    /* border: 1px solid black; */
+
+    user-select: none;
+  }
+
+  .path-field{
+    opacity: .6;
+    
+    display: flex;
+  }
+  
+  .path-element {
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.3s;
+
+    color: var(--txt-secondary, #A4A4A4);
+
+    text-align: center;
+    font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+
+    padding: 8px 12px;
+
+    white-space: nowrap;
+
+  }
+
+.path-field:last-of-type .path-element{
+  color: var(--txt-accent, #4876F9);
+  text-align: center;
+  font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
+  font-family: 'Nunito';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  
+  }
+
+  .path-field .path-slash{
+    padding: 8px 12px;
+  }
+
+  .path-field:last-of-type .path-slash{
+    opacity: 1;
+  }
+  
+  .hovered {
+    color: var(--txt-accent, #4876F9);
+  }
+
+  .path-container:has(.hovered) .path-element{
+    /* opacity: .6; */
+  }
+  
+  .path-slash {
+    display: block;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+
+    color: var(--txt-secondary, #A4A4A4);
+    text-align: center;
+    font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+
+  }

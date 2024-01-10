@@ -1,0 +1,69 @@
+.yearlyCalendar {
+  text-align: center;
+}
+
+.yearlyMonth {
+  display: inline-block;
+  float: left;
+  height: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 33.3333333333%;
+}
+.yearlyMonth .yearlyMonthName {
+  margin: 20px 0;
+  text-align: left;
+}
+.yearlyMonth .weekRow {
+  height: 30px;
+}
+.yearlyMonth .calendarDayOfWeek div {
+  text-align: center;
+}
+.yearlyMonth .inactiveDay .currentDay {
+  color: #b5b5b5;
+  display: unset;
+  border-radius: unset;
+  background-color: transparent;
+}
+.yearlyMonth .dayCell {
+  height: 30px;
+  text-align: center;
+}
+.yearlyMonth .dayCell .dayDate {
+  font-size: 0.8em;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.yearlyMonth .dayCell .dayDate span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.yearlyMonth .dayCell .dayText {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.yearlyMonth .dayCell .dayDate.currentDay {
+  width: 50%;
+  height: 50%;
+}
+
+.calendarWrapper {
+  width: 100%;
+  color: #202029;
+}
+
+@media only screen and (max-width: 426px) {
+  .yearlyMonth {
+    width: 50%;
+  }
+}/*# sourceMappingURL=index.styles.css.map */

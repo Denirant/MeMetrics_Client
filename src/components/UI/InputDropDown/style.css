@@ -1,0 +1,136 @@
+.drop_wrapper_common{
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(151, 174, 194, 0.589);
+
+    opacity: 1;
+
+    
+    border-radius: 14px;
+}
+
+
+.drop_conteiner_common{
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+
+
+.drop_conteiner-trigger_common{
+    border-radius: 14px;
+
+    width: 100%;
+    line-height: 40px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    transition: box-shadow .4s ease;
+    cursor: pointer;
+    
+    background-color: white;
+    
+    /* border-radius: 14px 0px 0px 14px; */
+}
+
+
+.drop_input_common{
+    font-family: 'Poppins Semibold', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 40px;
+    color: #151515;
+
+    border: 0;
+    outline: 0;
+
+    padding: 0 40px 0px 12px;
+
+    box-sizing: border-box;
+
+    width: 100%;
+
+    border-radius: 14px;
+}
+
+
+.drop_conteiner-menu_common{
+    background: #fff;
+    /* border-radius: 12px; */
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    box-shadow: 0 1px 8px rgba(0,0,0,.3);
+    opacity: 0;
+    text-align: center;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity .4s ease, transform .4s ease, visibility .4s ease;
+
+    
+    border-radius: 14px;
+}
+
+.drop_menu-groups_common{
+    list-style-type: none;
+    width: 100%;
+    padding: 20px 0px;
+    margin: 0 auto;
+}
+.drop_menu-group_common{
+    cursor: pointer;
+}
+
+.drop_menu-group_common + .drop_menu-group_common{
+    margin-top: 15px;
+}
+
+
+.drop_conteiner-menu__active_common{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+    z-index: 1;
+}
+
+a{
+    text-decoration: none;
+    color: #151515;
+}
+
+.drop_search{
+    position: relative;
+}
+
+.drop_clear{
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 10px);
+
+    width: 20px;
+    height: 20px;
+
+    background-image: url('https://img.icons8.com/ios-glyphs/512/macos-close.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
+.rs-picker-menu{
+    z-index: 100000 !important;
+}

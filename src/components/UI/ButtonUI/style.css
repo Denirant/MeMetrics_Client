@@ -1,0 +1,52 @@
+.ui_btn_wrapper{
+    position: relative;
+}
+
+.ui_btn{
+    width: 40px;
+    height: 40px;
+    
+    background-color: white;
+
+    border: 1px solid black;
+
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.5;
+
+    pointer-events: none;
+}
+
+
+.ui_btn__active{
+    opacity: 1;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+/* export all tables */
+
+.ui_btn__downloadAll{
+    background-image: url('https://img.icons8.com/?size=512&id=42393&format=png');
+}
+
+/* download pattern table */
+.ui_btn__pattern{
+    background-image: url('https://img.icons8.com/?size=512&id=Jy511iSogF3g&format=png');
+}
+
+
+/* grid/table toggle */
+.ui_btn__table{
+    background-image: url('https://img.icons8.com/?size=512&id=49602&format=png');
+}
+
+.ui_btn__grid{
+    background-image: url('https://img.icons8.com/?size=512&id=GhW7E6TRTWHw&format=png');
+}
+
+.ui_btn__compare{
+    background-image: url('https://img.icons8.com/?size=512&id=FRAodHBai43d&format=png');
+}

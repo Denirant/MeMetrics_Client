@@ -1,0 +1,198 @@
+/* <div className="create_tag_wrapper">
+      <div className="create_tag_container">
+        <div className="create_tag_header">
+          <h1 className="create_tag_header-title">
+            Tags
+            <span>Enter new tag</span>
+          </h1>
+          <div className="create_tag_header-close" onClick={handleCancel}></div>
+        </div>
+        <div className="create_tag_body">
+          <div className="inputs_row">
+            <div className="company_add_search__input">
+              <label
+                htmlFor="worker_name"
+                className="company_add_search__label"
+              >
+                Enter tag name
+                <input
+                  type="text"
+                  id="worker_name"
+                  className="company_add_search__input"
+                  onChange={handleChangeInput}
+                  value={inputTagName}
+                  placeholder="Enter tag name"
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+        <div className="tag_control">
+          <button className="tag_btn" onClick={handleCancel}>
+            Cancel
+          </button>
+          <button
+            className="tag_btn blue"
+            onClick={() => {
+              handleCreate(inputTagName, tagColor);
+            }}
+          >
+            Save
+          </button>
+        </div>
+      </div>
+    </div> */
+
+.create_tag_container {
+  background-color: white;
+
+  width: 480px;
+
+  padding: 40px;
+
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.create_tag_header {
+  display: flex;
+  flex-direction: row;
+
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.create_tag_header-title {
+  color: var(--Txt-primary, #1c1c1c);
+  font-family: Nunito;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 26.4px */
+
+  margin: 0;
+}
+
+.create_tag_header-close {
+  width: 28px;
+  height: 28px;
+
+  background-image: url("../../../assets/img/Close.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  cursor: pointer;
+}
+
+.create_tag_body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.create_tag_body .react-colorful {
+  width: 100% !important;
+  height: 250px !important;
+}
+
+.create_tag_body .colorPickerComponents_label {
+  border-radius: 12px !important;
+  background: var(--BG-menu-nav, #f8f8f8) !important;
+
+  color: var(--Txt-primary, #1c1c1c) !important;
+  font-feature-settings: "clig" off, "liga" off !important;
+  font-family: Nunito !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 20px !important; /* 142.857% */
+
+  padding: 8px 16px !important;
+
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 20px !important;
+
+  text-indent: 0px !important;
+
+  width: fit-content !important;
+  height: fit-content !important;
+
+  border: none !important;
+
+  margin-top: 12px;
+
+  width: 100%;
+  display: block;
+}
+
+.create_tag_body .colorPickerComponents_label::after {
+  display: none;
+}
+
+.company_add__header-color .color_icon {
+  width: 32px;
+  height: 32px;
+
+  border-radius: 8px;
+}
+
+.create_tag_body .colorPickerComponents_label > input {
+  background-color: rgba(255, 255, 255, 0) !important;
+
+  width: 308px;
+  border: none;
+  outline: none;
+  margin-left: -18px;
+}
+
+.create_tag_body .color_icon {
+  width: 32px;
+  height: 32px;
+
+  border-radius: 8px;
+}
+
+.create_tag_body .colorPickerComponents_label p {
+  margin: 0;
+  padding: 0;
+
+  color: var(--Txt-primary, #1c1c1c);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Nunito;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+}
+
+.create_tag_body .color_offers {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  height: 46px;
+
+  margin-top: 14px;
+
+  list-style-type: none;
+}
+
+.create_tag_body .color_offers--item {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 8px;
+
+  /* border: 1px solid rgba(0, 0, 0, 0.165); */
+
+  cursor: pointer;
+}

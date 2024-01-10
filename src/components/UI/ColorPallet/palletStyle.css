@@ -1,0 +1,109 @@
+/* <div className='_color-container'>
+            <div className='_color-preview'>
+                <p>Color</p>
+                <div className='_color-preview-cyrcle' style={{backgroundColor: `hsl(${currentColor} 95% 48%)`}}></div>
+            </div>
+            {isActive && <div ref={colorContainerRef} className='_color-palette' style={paletteContainer}>
+                <div className='_color-palette-line'  style={paletteStyle}></div>
+                <div ref={paletteRef} className='_color-palette-cyrcle' style={{backgroundColor: `hsl(${currentColor} 95% 48%)`}} onMouseDown={handleDown}></div>
+            </div>}
+        </div> */
+
+
+._color-container{
+    position: relative;
+
+    width: fit-content;
+
+    margin: 0 auto;
+}
+
+
+
+._color-preview{
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 8px 12px 8px 12px;
+    margin: 0;
+
+    /* box-shadow: 0px 0px 20px rgba(43, 43, 43, 0.12); */
+
+    border-radius: 30px;
+
+    cursor: pointer;
+    user-select: none;
+
+    background-color: white;
+}
+
+._color-preview > p{
+    margin: 0;
+    
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+._color-preview-cyrcle{
+    width: 24px;
+    height: 24px;
+
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+
+
+._color-drop{
+    width: fit-content;
+    padding: 6px 14px;
+
+    border-radius: 14px;
+
+    box-shadow: 0px 0px 20px rgba(43, 43, 43, 0.12);
+
+    /* position: absolute;
+    top: 80px;
+    left: calc(50% - 212px); */
+
+    background-color: white;
+}
+
+._color-palette{
+    position: relative;
+    width: 240px;
+    border-radius: 10px;
+}
+
+._color-palette-line{
+    width: 100%;
+    height: 15px;
+    border-radius: 10px;
+    /* filter: blur(0.5px); */
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+._color-button{
+    display: block;
+    width: fit-content;
+
+    margin: 0 auto;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    
+    padding: 6px 14px;
+    box-sizing: border-box;
+
+    border-radius: 6px;
+
+    background-color: rgb(28, 130, 255);
+    color: white;
+    
+}

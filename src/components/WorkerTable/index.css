@@ -1,0 +1,347 @@
+/* <div className="container worker_table">
+      <div className="row">
+        <div className="col-md-12">
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <input
+                    type="checkbox"
+                    className="form-check-input"
+                    checked={masterChecked}
+                    id="mastercheck"
+                    onChange={(e) => onMasterCheck(e)}
+                  />
+                </th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Website</th>
+              </tr>
+            </thead>
+            <tbody>
+              {list.map((user) => (
+                <tr key={user.id} className={user.selected ? "selected" : ""}>
+                  <th scope="row">
+                    <input
+                      type="checkbox"
+                      checked={user.selected}
+                      className="form-check-input"
+                      id={`rowcheck${user.id}`}
+                      onChange={(e) => onItemCheck(e, user)}
+                    />
+                  </th>
+                  <td>{user.name}</td>
+                  <td>{user.email}</td>
+                  <td>{user.phone}</td>
+                  <td>{user.website}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div> */
+
+
+.worker_table{
+    padding: 0;
+
+    width: 100% !important;
+    max-width: 100%;
+
+    /* min-width: 1343px; */
+
+    overflow-y: auto !important;
+}
+
+.worker_table > .row{
+    padding: 0;
+    width: 100%;
+
+    margin: 0;
+}
+
+.worker_table > .row > .col-md-12{
+    padding: 0;
+    padding: 8px 0px;
+}
+
+.worker_table > .row > .col-md-12 > .table{
+    border: 0px solid rgba(0, 0, 0, 0);
+
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.worker_table > .row > .col-md-12 > .table tr{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    gap: 20px;
+
+    padding: 8px 16px;
+
+    width: 100%;
+    /* border: 1px solid black; */
+
+    border-radius: 0;
+}
+
+.worker_table > .row > .col-md-12 > .table tr > *:not(:first-child){
+    max-width: 100%;
+    width: 14%;
+
+    padding: 8px 12px;
+    box-sizing: border-box;
+
+    display: block;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    color: var(--Txt-primary, #1C1C1C);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.24px;
+
+  position: relative;
+}
+
+
+/* .worker_table > .row > .col-md-12 > .table tr > td:not(:first-child)::before{
+  width: 1px;
+  height: 20px;
+
+  position: absolute;
+  top: 0;
+  left: -10px;
+
+  content: "";
+
+  background-color: black;
+
+  z-index: 1;
+  
+  box-sizing: content-box;
+} */
+
+.worker_table > .row > .col-md-12 > .table tr img{
+    object-fit: cover;
+
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50px;
+}
+
+.worker_table > .row > .col-md-12 > .table tr > *:nth-child(2){
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+
+    padding-left: 0;
+}
+
+.worker_table > .row > .col-md-12 > .table tr > *:last-child{
+    width: 90px;
+
+    overflow: visible;
+}
+
+.worker_table > .row > .col-md-12 > .table tr > *:last-child .dropdown__content{
+    width: 190px;
+
+    right: -20px;
+    top: 32px;
+}
+
+.worker_table > .row > .col-md-12 > .table tr > *:last-child .dropdown__content p{
+    line-height: 28px;
+}
+
+.worker_table > .row > .col-md-12 > .table tr.selected{
+    background-color: #EFF2FF;
+}
+
+.worker_table > .row > .col-md-12 > .table th:first-of-type{
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+
+    box-sizing: content-box;
+}
+
+.worker_table > .row > .col-md-12 > .table thead th:last-of-type{
+    height: 24px;
+    padding: 0;
+    box-sizing: content-box;
+
+    width: 90px;
+
+    display: block;
+}
+
+.worker_table > .row > .col-md-12 > .table thead th{
+    cursor: pointer;
+}
+
+.worker_table > .row > .col-md-12 > .table > thead > tr > th{
+    color: var(--fg-foreground-tertiary, #717A8C) !important;
+    font-feature-settings: 'clig' off, 'liga' off !important;
+    font-family: Nunito !important;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 153.846% */
+    letter-spacing: -0.08px;
+}
+
+
+.worker_table > .row > .col-md-12 > .table td{
+    background-color: rgba(240, 248, 255, 0);
+}
+
+.worker_table > .row > .col-md-12 > .table tbody td:nth-of-type(5){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.status_indicator{
+    width: 8px;
+    height: 8px;
+    
+    display: inline-block;
+
+    border-radius: 50%;
+
+    background-color: #6C7074;
+
+    margin-right: 10px;
+}
+
+.status_indicator.active{
+    background-color: #2EBDAB;
+}
+
+/* <label class="checkmark-container">
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      checked={masterChecked}
+                      id="mastercheck"
+                      onChange={(e) => onMasterCheck(e)}
+                    />
+                    <span class="checkmark"></span>
+                  </label> */
+
+/* Customize the label (the container) */
+.checkmark-table-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    width: 20px;
+    height: 20px;
+
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .checkmark-table-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #ffffff;
+
+    border-radius: 4px;
+    border: 1px solid var(--Stroke, #E8E8E8);
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .checkmark-table-container:hover input ~ .checkmark {
+    background-color: #eaf3fa;
+
+    cursor: pointer;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .checkmark-table-container input:checked ~ .checkmark {
+    background-color: #2196F3;
+    border: 1px solid var(--Stroke, #2196F3);
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark-table-container:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkmark-table-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkmark-table-container .checkmark:after {
+    left: 0px;
+    top: -1px;
+    width: 20px;
+    height: 20px;
+
+    display: none;
+    
+    position: absolute;
+    content: "";
+
+    background-image: url('../../assets/img/check.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  
+
+.empty_table-message{
+  color: var(--Txt-secondary, #A4A4A4);
+  text-align: center;
+  font-family: Nunito;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+
+  max-width: 350px;
+
+  margin: 0 auto;
+  margin-top: 40px;
+}

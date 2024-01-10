@@ -1,0 +1,1345 @@
+/* <div className='bank_header-container'>
+                <ul className='bank_header-list'>
+                    {
+                        banksArray.map((el) => {
+                            <li className='bank_header-element' style={{backgroundColor: el.color}}>
+                                <img src={el.logo} alt="bank_logo" />
+                            </li>
+                        })  
+                    }
+                    <li className='bank_header-element bank_header-element__empty'>
+                        <img src={AddIcon} alt="logo" />
+                        <span className='bank_header-element-text'>Добавить банк</span>
+                    </li>
+                </ul>
+                <div className='bank_header-control'></div>
+            </div> */
+
+.bank_container {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  width: 100%;
+
+  position: relative;
+}
+
+.bank_header-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  /* padding: 20px; */
+}
+
+.bank_header-list {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.bank_header-element {
+  padding: 8px 18px 8px 46px;
+
+  display: flex;
+  flex-direction: row;
+
+  border-radius: 14px;
+
+  width: fit-content;
+  height: 40px;
+
+  box-sizing: border-box;
+
+  /* border: 1px solid rgb(171, 171, 171); */
+  outline: none;
+  /* box-shadow: 0px 0px 10px rgba(194, 194, 194, 0.582); */
+
+  cursor: pointer;
+
+
+  border-radius: 10px;
+  border: 1px solid #EBEBEB;
+}
+
+.bank_header-element.selected{
+  border: 1px solid var(--Accent, #4876F9);
+  background-color: white;
+}
+
+.bank_header-element__empty {
+  border-radius: 8px;
+  background: var(--Btn-primary-default, #4876F9);
+
+  padding: 8px 18px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+
+  width: fit-content;
+  /* height: 48px; */
+  box-sizing: border-box;
+
+  transition: all .3s ease-in-out;
+
+  color: var(--Txt-btn-primary, #FFF);
+text-align: center;
+font-family: Nunito;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 114.286% */
+letter-spacing: 0.28px;
+
+}
+
+.bank_header-element__empty:hover{
+  background-color: #ebebeb;
+}
+
+.bank_header-element__all{
+  border: 1px solid #737373;
+
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+
+  width: fit-content;
+  height: 48px;
+  box-sizing: border-box;
+
+  color: var(--Txt-primary, #414141);
+  font-family: Nunito;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 48px; /* 26.4px */
+
+  background-color: #ffffff;
+
+  transition: all .3s ease-in-out;
+}
+
+.bank_header-element__all:hover{
+  background-color: #ebebeb;
+}
+
+.bank_header-element__icon {
+  border: none;
+  /* background-color: #497aff; */
+
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+
+  padding: 8px 8px;
+
+  height: 32px;
+  width: 32px;
+
+  color: white;
+
+  /* margin-left: auto; */
+
+  border-radius: 8px;
+  border: 1px solid var(--Stroke, #E8E8E8) !important;
+  background: var(--BG-Input, #FFF);
+
+  transition: all .3s ease-in-out;
+}
+
+.bank_header-element__icon:hover{
+  background-color: #4979ff14;
+}
+
+.bank_header-element__icon:last-of-type{
+  border: none;
+  
+}
+
+.bank_header-element__empty + .bank_header-element__icon{
+  margin-left: auto;
+}
+
+.bank_header-control {
+  
+}
+
+/* <div className='bank_header-control'>
+                    <div className='bank_header-toggle'>
+                        <input type="radio" id='radio_toggle'/>
+                        <label htmlFor="radio_toggle">
+                            <span className='bank_header-element bank_header-element__left'>Dashboard</span>
+                            <span className='bank_header-element bank_header-element__right'>Table</span>
+                        </label>
+                    </div>
+                    <div className='blank_header-selector'>
+
+                    </div>
+                </div> */
+
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 100000000;
+
+  background: var(--BG-popup, rgba(150, 168, 201, 0.3));
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  width: 1068px;
+  height: 892px;
+
+  /* padding: 20px; */
+  border-radius: 12px;
+  background: var(--BG, #fff);
+
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: row;
+
+  overflow: hidden;
+
+}
+
+.popup-content__select{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: 28px;
+
+  width: 316px;
+  height: 100%;
+
+  list-style-type: none;
+
+  box-sizing: border-box;
+
+  background: var(--BG-menu-nav, #F9FAFB);
+
+}
+
+.popup-content__select-item{
+  padding: 12px 16px;
+
+  width: 100%;
+
+  color: var(--Txt-secondary, #A4A4A4);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: 'Nunito';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 125% */
+
+  cursor: pointer;
+
+  transition: all .15s ease-in-out;
+
+  border-radius: 8px;
+}
+
+.popup-content__select-item:hover{
+  background-color: #94a7d643;
+  color: rgb(68, 68, 68);
+}
+
+.popup-content__select-item.active{
+  background: var(--Txt-accent, #4876F9);
+  color: white;
+}
+
+.popup-content__info{
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+
+  width: 100%;
+  height: 100%;
+}
+
+.popup-content__info-header{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  height: 160px;
+  /* background-color: #1A1A1A; */
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(32,32,32,1) 41%, rgb(39, 39, 39) 100%);
+
+
+  padding: 24px;
+
+  position: relative;
+}
+
+.popup-close{
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  background-color: #00000000;
+
+  width: 32px;
+  height: 32px;
+  /* padding: 6px; */
+
+  border-radius: 50%;
+
+  background-image: url('../../../assets/img/Close.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+}
+
+.popup-content__info-about{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+}
+
+.popup-content__info-about img{
+  width: 60px;
+  height: 60px;
+
+  border-radius: 12px;
+}
+
+.popup-content__info-about h1{
+  color: var(--text-white, #F5F5F5);
+  font-family: 'Nunito';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+
+  margin: 0;
+}
+
+.popup-content__info-about span{
+  display: block;
+}
+
+.popup-content__info-about span a{
+  color: var(--text-placeholder, #777);
+  font-family: 'Nunito';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 100% */
+
+  transition: all .3s ease-in-out;
+}
+
+.popup-content__info-about span a:hover{
+  color: #4876F9;
+}
+
+.popup-content__info-login{
+  border-radius: 8px;
+  background: var(--Btn-primary-hover, #1F55EF);
+
+  padding: 12px 16px;
+
+  color: var(--Txt-btn-primary, #FFF);
+  text-align: center;
+  font-family: 'Nunito';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: 0.28px;
+
+  width: 175px;
+  box-sizing: border-box;
+}
+
+.popup-content__info-login.logout{
+  background-color: #DB371F;
+  color: white;
+}
+
+/* <div className="popup">
+          <div className="popup-content">
+            <h2>Заголовок Pop-up</h2>
+            <p>Содержание Pop-up</p>
+            <button onClick={togglePopup}>Закрыть</button>
+            <ul className="popup-content__select">
+              {bankInfo.map((el, index) => (
+                <li onClick={(e) => handleTabClick(e, index)} className={`popup-content__select-item ${!index ? 'active' : '' }`}>{el.name}</li>
+              ))}
+               <li className="popup-content__select-item active">Tinkoff</li>
+              <li className="popup-content__select-item">Sberbank</li>
+              <li className="popup-content__select-item">VTB</li>
+              <li className="popup-content__select-item">MTS</li>
+            </ul>
+            <div className="popup-content__info">
+              <div className="popup-content__info-header">
+                <div className="popup-content__info-about">
+                  <img src={bankInfo[selectedTab].icon} alt="bank logo"/>
+                  <h1>{bankInfo[selectedTab].name} <span><a href={bankInfo[selectedTab].link.href}>{bankInfo[selectedTab].link.text}</a></span></h1>
+                </div>
+                <button className="popup-content__info-login"></button>
+              </div>
+              <div className="popup-content__info-body"></div>
+            </div>
+          </div>
+        </div> */
+
+
+
+
+
+.header-tools {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #dedede;
+
+  gap: 30px;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  width: 100%;
+
+  /* border: 1px solid black; */
+}
+
+.header-tools:has(.hide){
+  gap: 0px;
+}
+
+.bank_header-control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: calc(100% - 486px);
+
+  transition: width 0.35s ease-in-out;
+}
+
+.header-tools:has(.hide) .bank_header-control{
+  width: 100% !important;
+  /* padding: 20px !important; */
+  /* padding-right: 20px; */
+}
+
+.header-currency {
+  width: 486px;
+  opacity: 1;
+
+  transition: all 0.35s ease-in-out;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-currency h1{
+  color: #0E132F;
+
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Nunito;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 133.333% */
+
+}
+
+.header-currency.hide {
+  width: 0;
+  opacity: 0;
+}
+
+.header-tools .bank_header-toggle {
+  position: relative;
+
+  user-select: none;
+
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  border-radius: 32px;
+
+  background-color: white;
+}
+
+/* .bank_header-toggle:hover{
+        background-color: #ececec;
+    } */
+
+    .header-tools .bank_header-toggle input {
+  display: none;
+}
+
+.header-tools .bank_header-toggle label {
+  display: flex;
+  position: relative;
+
+  gap: 12px;
+
+  box-sizing: border-box;
+
+  position: relative;
+  z-index: 100;
+
+  padding: var(--4, 4px);
+}
+
+.header-tools .bank_header-toggle span {
+  padding: 4px 16px;
+
+  width: 110px;
+  height: fit-content;
+
+  color: var(--Txt-secondary, #a4a4a4);
+  font-family: "Inter";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: -0.15px;
+
+  box-shadow: none;
+
+  text-align: center;
+
+  display: block;
+
+  transition: all 0.15s ease-in-out;
+
+  /* border: none; */
+}
+
+/* Left lable selected  */
+.header-tools .bank_header-toggle input:not(:checked) + label span:first-of-type {
+  color: white;
+
+  background-color: #4876F9;
+}
+
+/* Right lable selected  */
+.header-tools .bank_header-toggle input:checked + label span:last-of-type {
+  color: white;
+
+  background-color: #4876F9;
+}
+
+/* <div className='blank_header-selector'>
+                        <ul className='blank_header-selector--list'>
+                            <li className='blank_header-selector--element'>12 месяцев</li>
+                            <li className='blank_header-selector--element'>30 дней</li>
+                            <li className='blank_header-selector--element'>7 дней</li>
+                            <li className='blank_header-selector--element'>24 часа</li>
+                        </ul>
+                        <button className='blank_header-selector--button'>
+                            <img src={CalendarIcon} alt="Calendar icon"/>
+                            <span>Выбрать дату</span>
+                        </button>
+                    </div> */
+
+.blank_header-selector {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+
+  align-items: center;
+}
+
+.blank_header-selector--list {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+
+  /* border-radius: 38px; */
+
+  list-style-type: none;
+
+  /* border: 1px solid #d7d7d7; */
+
+  padding: 4px;
+
+  height: 48px;
+
+  background-color: white;
+}
+
+/* .blank_header-selector--element + .blank_header-selector--element{
+        border-left: 1px solid #d7d7d7;
+    } */
+
+.blank_header-selector--element input {
+  display: none;
+}
+
+.blank_header-selector--element input:checked + label {
+  background-color: #497aff;
+  color: white;
+}
+
+.blank_header-selector--element label {
+  color: var(--Txt-secondary, #A4A4A4);
+  text-align: center;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Nunito;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+
+
+  width: fit-content;
+
+  padding: 8px 12px;
+
+  text-align: center;
+
+  /* padding: 0px 18px; */
+
+  border-radius: 38px;
+
+  cursor: pointer;
+
+  border-radius: 8px;
+  border: 1px solid var(--Stroke, #E8E8E8);
+  background: var(--BG, #FFF);
+
+
+
+  transition: all 0.15s ease-in-out;
+}
+
+.blank_header-selector--element label:hover {
+  background-color: #f5f5f5;
+}
+
+.blank_header-selector--element input:checked + label:hover {
+  background-color: #7197ff;
+}
+
+.blank_header-selector--button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 24px;
+
+  border-radius: 38px;
+  border: 1px solid #ebebeb;
+
+  background-color: white;
+
+  /* padding: 12px; */
+
+  transition: all 0.15s ease-in-out;
+  color: var(--Txt-secondary, #414141);
+  font-family: "Inter";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: -0.15px;
+}
+
+.blank_header-selector--button span{
+  white-space: nowrap;
+}
+
+.blank_header-selector--button:hover {
+  background-color: #f5f5f5;
+}
+
+.blank_header-selector--button img {
+  margin-top: -4px;
+}
+
+/* <div className='bank_body-analytic'>
+                <div className='bank_body-analytic--content'>
+
+                </div>
+                <div className='bank_body-analytic--rate'>
+                    
+                </div>
+            </div> */
+
+.bank_body-analytic {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+
+  width: 100%;
+  height: calc(100% - 146.8px);
+
+  padding: 20px;
+}
+
+.bank_body-analytic--content {
+  /* border: 1px solid black; */
+  border-radius: 20px;
+
+  width: calc(100% - 486px);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bank_body-analytic--content .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  flex-wrap: nowrap;
+
+  padding: 0;
+  margin: 0;
+
+  gap: 20px;
+
+  height: calc(100% - 728px);
+  width: 100%;
+
+  border: none !important;
+}
+
+.bank_body-analytic--content .row > div {
+  display: block;
+  border-radius: 12px;
+
+  border: 1px solid var(--Stroke, #E8E8E8);
+  background: var(--BG-menu-nav, #F9FAFB);
+
+
+
+  flex-shrink: 1;
+
+  padding: 0;
+  margin: 0;
+
+  height: 100%;
+
+  padding: 20px;
+
+  /* background-color: rgba(9, 83, 255, 0.212); */
+}
+
+.bank_body-analytic--content .row:nth-of-type(2) > div:nth-of-type(1){
+  width: calc(100% - 430px);
+}
+
+.bank_body-analytic--content .row > div:nth-of-type(2){
+  width: 430px;
+}
+
+.bank_body-analytic--content .row:nth-of-type(1) {
+  height: calc(100% - 380px);
+}
+
+.bank_body-analytic--content .row:nth-of-type(2) {
+  height: 380px;
+}
+
+.bank_body-analytic--rate {
+  /* border: 1px solid black; */
+  border-radius: 20px;
+
+  width: 486px;
+}
+
+.bank_body-analytic--rate .list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  gap: 20px;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.bank_body-analytic--rate .list-item {
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  height: 100%;
+  margin: 4px;
+
+  margin: 0;
+  padding: 0;
+
+  border-radius: 12px;
+  border: 1px solid var(--Stroke, #E8E8E8);
+  background: var(--BG-menu-nav, #F9FAFB);
+
+  padding: 24px 24px 32px 24px;
+
+  opacity: 1;
+  cursor: default;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bank_body-analytic--rate .list-item:hover {
+  background-color: white !important;
+}
+
+.list-item_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.bank_body-analytic--rate .list-item span {
+  color: var(--Gray-800, #1F2937);
+font-family: Nunito;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 125% */
+}
+
+.bank_body-analytic--rate .list-item img {
+  transform: rotateZ(0deg);
+  transition: all 0.5s ease-in-out;
+
+  width: 24px;
+  height: 24px;
+}
+
+.bank_body-analytic--rate .list-item.active img {
+  transform: rotateZ(180deg);
+}
+
+.bank_body-analytic--rate .list:has(.active) .list-item {
+  height: 0;
+  padding: 0 16px;
+  border-color: white;
+  opacity: 0;
+}
+
+.bank_body-analytic--rate .list:has(.active) {
+  gap: 0;
+}
+
+.bank_body-analytic--rate .list-item.active {
+  height: calc(
+    100% + 6px
+  ) !important; /* Замените на желаемую высоту элемента при активации */
+
+  padding: 24px !important;
+  border-color: #e1e1e3 !important;
+
+  opacity: 1 !important;
+}
+
+.bank_body-analytic--rate .list-item button {
+  width: 100%;
+  padding: 8px;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+
+  color: #000;
+}
+
+.bank_body-analytic--rate .list-item.active button {
+  background-color: #ddd;
+}
+
+/* <div className={`list-item_search ${itemClass}`}>
+                <input type="text" placeholder='Search...' className=''/>
+            </div> */
+
+.list-item_search {
+  width: 100%;
+
+  padding: 0 44px 0 12px;
+
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid #F9FAFB;
+
+  background-color: white;
+
+  height: 0;
+  overflow: hidden;
+
+  transition: all 0.5s ease-in-out;
+
+  position: relative;
+}
+
+.list-item_search::after {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  content: "";
+
+  width: 20px;
+  height: 20px;
+
+  background-image: url("../../../assets/img/Search.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 110%;
+}
+
+.list-item_search input {
+  width: 100%;
+
+  color: #0e132f;
+  font-family: "Nunito";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 20.8px */
+
+  border: none;
+  outline: none;
+
+  transition: all 0.5s ease-in-out;
+
+  padding: 0;
+}
+
+.list-item_search:has(input:focus) {
+  border-color: #497aff;
+}
+
+.list-item_search.active {
+  height: 48px;
+  padding: 12px 44px 12px 12px;
+  border: 1px solid #e5e5ea;
+}
+
+.list-item_search.active input {
+  line-height: 130%;
+}
+
+.list-item_search.active + .list-item_info {
+  margin-top: 16px;
+}
+
+/* 
+    <ul className='list-item_list'>
+                {contentList.map(el => (
+                    <li className='list-item_list--element'>
+                        <img src={el.logo} className='list-item_list--element__image' alt="icon" />
+                        <p className='list-item_list--element__title'>{el.name}</p>
+                        <div className='list-item_list--element__rate'>
+                            <span className='list-item_list--element__current'>{el.rate}</span>
+                            <span className='list-item_list--element__prev'>{el.prev}</span>
+                        </div>
+                    </li>
+                ))}
+            </ul> */
+
+.list-item_list {
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+  scrollbar-width: thin; /* для Firefox */
+  scrollbar-color: transparent transparent; /* для Firefox */
+}
+
+.list-item_list::-webkit-scrollbar {
+  width: 0;
+}
+
+.list-item_list::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.list-item_list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.list-item_list::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.list-item_list--element {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+
+  padding: 16px 0px;
+}
+
+.list-item_list--element + .list-item_list--element {
+  border-top: 1px solid #e8e9ff;
+}
+
+.list-item_list--element__image {
+  width: 40px !important;
+  height: 40px !important;
+
+  transform: none !important;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+}
+
+.list-item_list--element__title {
+  color: #0e132f;
+  font-family: "Nunito";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.list-item_list--element__rate {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-end;
+
+  margin-left: auto;
+}
+
+.list-item_list--element
+  > .list-item_list--element__rate
+  > .list-item_list--element__current {
+  color: #0e132f;
+  font-family: "Nunito";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+}
+
+.list-item_list--element
+  > .list-item_list--element__rate
+  > .list-item_list--element__prev {
+  color: #838383;
+  font-family: "Nunito";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+/* .<div className='list-item_info'>
+    <span>Currency</span>
+    <span>Rate</span>
+    </div> */
+
+.list-item_info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.list-item_info > span {
+  color: #838383 !important;
+  font-family: "Nunito" !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 130% !important; /* 20.8px */
+}
+
+
+
+.lineChart .header{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.lineChart .bank_header-toggle{
+  width: 273.6px;
+}
+
+.lineChart .blank_header-selector--list{
+  width: 325.6px;
+}
+
+
+
+
+
+/* <div className="checkbox-container">
+        <label>
+          <input
+            type="checkbox"
+            name="checkbox1"
+            checked={checkboxState.checkbox1}
+            onChange={handleCheckboxChange}
+          />
+          Exchange
+        </label> */
+
+
+.checkbox-container{
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  /* margin-right: 20px; */
+}
+
+
+.checkbox-container label{
+  display: block;
+  /* width: 30%; */
+
+  padding: 8px 16px;
+
+  /* height: 40px; */
+
+  border-radius: 32px;
+  border: 1px solid var(--Stroke, #E8E8E8);
+  background: var(--BG-menu-nav, white);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  cursor: pointer;
+
+
+  user-select: none;
+
+  transition: all .3s ease-in-out;
+
+
+  color: var(--Txt-secondary, #A4A4A4);
+text-align: center;
+font-variant-numeric: lining-nums tabular-nums;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Nunito;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 133.333% */
+
+padding: 8px 12px;
+border-radius: 8px;
+
+
+}
+
+.checkbox-container label:hover{
+  background-color: #f5f5f5;
+}
+
+
+
+.checkbox-container label:has(input:checked) {
+  border: 1px solid var(--Accent, #4876F9);
+  color: #4876F9;
+}
+
+.checkbox-container label input{
+  display: none;
+}
+
+/* Определяем стили для наведения на чекбокс */
+.checkbox-container label:hover::before {
+  border-color: #4979ffe0; /* Цвет рамки при наведении */
+}
+
+
+.bank_header-list .bank_header-element:first-of-type{
+  color: var(--Light-Txt-primary, #1C1C1C);
+  text-align: center;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Nunito;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 100% */
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+  border: 1px solid var(--Stroke, #E8E8E8);
+  background: var(--BG, #FFF);
+
+
+  white-space: nowrap;
+
+  width: fit-content;
+}
+
+
+.bank_header-list .bank_header-element:nth-of-type(2){
+  width: 140px;
+
+  white-space: nowrap;
+
+  color: var(--Txt-secondary, #A4A4A4);
+text-align: center;
+font-family: Nunito;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 114.286% */
+letter-spacing: 0.28px;
+
+padding: 12px 20px;
+
+border-radius: 8px;
+border: 1px solid var(--Light-Stroke, #E8E8E8);
+
+}
+
+
+.bank_header-list .bank_header-element:nth-of-type(2).active{
+  border-radius: 8px;
+border: 1px solid var(--Accent, #4876F9);
+
+
+color: var(--Accent, #4876F9);
+text-align: center;
+font-family: Nunito;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 114.286% */
+letter-spacing: 0.28px;
+
+}
+
+
+
+
+/* Скрыть оригинальный чекбокс */
+.bank_header-element input[type="checkbox"] {
+  display: none;
+}
+
+/* Стилизация метки (label) */
+.bank_header-element label {
+  cursor: pointer;
+  display: none;
+  align-items: center;
+
+  position: relative;
+
+  display: block;
+}
+
+/* Стилизация кастомного чекбокса */
+.bank_header-element label::before {
+
+  position: absolute;
+  top: calc(50% - 8px);
+  left: -24px;
+
+  border-radius: 4px;
+
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc; /* Цвет границы неактивного чекбокса */
+  background-color: #fff;
+  margin-right: 10px; /* Отступ между чекбоксом и изображением */
+}
+
+/* Изменение стиля чекбокса при выборе */
+.bank_header-element input[type="checkbox"]:checked + label::before {
+  background-color: #007bff; /* Цвет фона активного чекбокса */
+  border-color: #007bff; /* Цвет границы активного чекбокса */
+}
+
+
+
+
+
+
+
+
+.category_bar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category_bar .category_bar-total{
+  color: var(--Gray-900, #191B1C);
+  font-family: Nunito;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+
+  margin: 0;
+}
+
+.category_bar .category_bar-settings{
+  display: block;
+
+  width: 24px;
+  height: 24px;
+
+  background-image: url('../../../assets/img/settingsGear.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  cursor: pointer;
+}

@@ -1,0 +1,8 @@
+.add_worker__container-form_body h1{
+    color: var(--Txt-primary, #1C1C1C);
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 150% */
+}

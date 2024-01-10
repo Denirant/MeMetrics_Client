@@ -1,0 +1,15 @@
+/* .checkBoxAll{
+    padding: 0px 10px 0px 5px;
+
+    border: 2px dashed #1f80f0;
+    border-radius: 24px;
+} */
+
+.rs-checkbox{
+    margin-left: 0px !important;
+    user-select: none;
+}
+
+/* .checkBoxAll > .rs-checkbox{
+    width: 100% !important;
+} */

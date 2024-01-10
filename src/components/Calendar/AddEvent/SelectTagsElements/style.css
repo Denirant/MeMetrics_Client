@@ -1,0 +1,6 @@
+.tag_indicator_mark{
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+}

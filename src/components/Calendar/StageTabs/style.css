@@ -1,0 +1,139 @@
+/* <div className="tab-panel">
+      <div className="tabs">
+        {tabs.map((tab, index) => (
+          <div
+            key={index}
+            className={`tab-title ${index === activeTab ? 'active' : ''}`}
+            onClick={() => handleTabSwitch(index)}
+          >
+            {tab.title}
+          </div>
+        ))}
+        <button className="add-tab-button" onClick={handleAddTab}>
+          <img src={AddTabIcon} alt="" />
+        </button>
+      </div>
+      <div className="form-container">
+        {tabs.map((tab, index) => (
+          <div key={index} className={`form ${index === activeTab ? 'active' : ''}`}>
+            <div className="inputs_row">
+            <div className="company_add_search__input">
+              <label htmlFor="inn_value" className="company_add_search__label">
+                Add member
+                <input
+                  type="text"
+                  id="name"
+                  className="company_add_search__input"
+                  placeholder="Enter memeber"
+                  value={tabs[index]?.memeber}
+                  onChange={(e) => handleTabChange(index, 'member', e.target.value)
+                  }
+                />
+              </label>
+            </div>
+          </div>
+          </div>
+        ))}
+      </div>
+    </div> */
+
+.tab-panel{
+    width: 0;   
+    height: 0 !important;
+
+    transition: all .15s ease-in-out;
+    /* transition: opacity .1s ease-out; */
+
+    /* overflow: hidden; */
+    opacity: 0;
+}
+
+.tab-panel.active{
+    width: 516px;
+    margin-top: 50px;
+    padding-left: 28px;
+    border-left: 1px solid #d2d2d2;
+    opacity: 1;
+    height: 765px !important;
+}
+
+.tabs{
+    display: flex;
+    flex-direction: row;
+
+    gap: 12px;
+
+    padding: 0 16px;
+
+    height: 44px;
+}
+
+.tab-title{
+    color: #A4A4A4;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; /* 200% */   
+
+    padding: 4px 12px 0px 12px;
+
+    cursor: pointer;
+
+    height: 28px;
+
+    align-self: flex-end;
+}
+
+.tab-title.active{
+    color: var(--Accent, #4876F9);
+    border-radius: 12px 12px 0px 0px;
+    background: var(--light-hover, #EFF2FF);
+}
+
+.add-tab-button{
+    border-radius: 8px;
+    background: var(--Btn-primary-default, #4876F9);
+
+    padding: 0 12px; 
+
+    margin-left: auto;
+
+    
+    padding: 0 16px;
+
+    height: 28px !important;
+    display: block;
+}
+
+.form-container{
+    border-radius: 12px;
+    background: var(--light-hover, #EFF2FF);
+
+    padding: 16px;
+
+    height: fit-content;
+
+}
+
+.form-container .inputs_row:first-of-type .company_add_search__input{
+    margin-top: 0;
+}
+
+.form-container .company_add_search__input{
+    margin-top: 16px;
+}
+
+.form-container textarea.company_add_search__input{
+    height: 305px;
+}
+
+.form{
+    display: none;
+}
+
+.form.active{
+    display: block;
+}

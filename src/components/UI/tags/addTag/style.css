@@ -1,0 +1,14 @@
+.tag_add{
+    display: block;
+
+    /* border-radius: 6px; */
+    border: 1px solid grey;
+
+    height: 28px;
+    width: 170px;
+
+    padding: 0;
+    
+    box-sizing: border-box;
+    font-size: 14px;
+}

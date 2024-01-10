@@ -1,0 +1,15 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="CNY">
+<g clip-path="url(#clip0_1057_483865)">
+<rect width="40" height="40" rx="8" fill="#F93939"/>
+<path id="Vector" d="M50.6667 0H5.33333C2.38781 0 0 2.38781 0 5.33333V34.6667C0 37.6122 2.38781 40 5.33333 40H50.6667C53.6122 40 56 37.6122 56 34.6667V5.33333C56 2.38781 53.6122 0 50.6667 0Z" fill="#F93939"/>
+<path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.6616 19.28L10.7416 21.3413L11.4883 16.976L8.32031 13.8827L12.7016 13.2507L14.6616 9.27733L16.619 13.2507L21.0003 13.8827L17.827 16.976L18.579 21.3387L14.6616 19.28ZM24.0003 8H26.667V10.6667H24.0003V8ZM26.667 13.3333H29.3336V16H26.667V13.3333ZM26.667 18.6667H29.3336V21.3333H26.667V18.6667ZM24.0003 24H26.667V26.6667H24.0003V24Z" fill="#FFDA2C"/>
+</g>
+<rect x="0.5" y="0.5" width="39" height="39" rx="7.5" stroke="#A4A4A4"/>
+</g>
+<defs>
+<clipPath id="clip0_1057_483865">
+<rect width="40" height="40" rx="8" fill="white"/>
+</clipPath>
+</defs>
+</svg>

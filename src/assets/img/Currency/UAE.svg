@@ -1,0 +1,18 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="UAE">
+<g clip-path="url(#clip0_1108_580380)">
+<g id="Group 6">
+<path id="Vector" d="M44.9784 0H-0.354899C-3.30042 0 -5.68823 2.38781 -5.68823 5.33333V34.6667C-5.68823 37.6122 -3.30042 40 -0.354899 40H44.9784C47.924 40 50.3118 37.6122 50.3118 34.6667V5.33333C50.3118 2.38781 47.924 0 44.9784 0Z" fill="white"/>
+<path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M-5.68823 26.6667H50.3118V40H-5.68823V26.6667Z" fill="#151515"/>
+<path id="Vector_3" fill-rule="evenodd" clip-rule="evenodd" d="M-5.68823 0H50.3118V13.3333H-5.68823V0Z" fill="#249F58"/>
+<path id="Vector_4" fill-rule="evenodd" clip-rule="evenodd" d="M-5.68823 0V40H10.3118V0H-5.68823Z" fill="#F93939"/>
+</g>
+</g>
+<rect x="0.5" y="0.5" width="39" height="39" rx="7.5" stroke="#A4A4A4"/>
+</g>
+<defs>
+<clipPath id="clip0_1108_580380">
+<rect width="40" height="40" rx="8" fill="white"/>
+</clipPath>
+</defs>
+</svg>

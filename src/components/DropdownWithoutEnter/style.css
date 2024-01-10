@@ -1,0 +1,50 @@
+.dropdownWithoutEnter {
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Стили для поля ввода */
+  .dropdownWithoutEnter-input {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 200px;
+    background-color: #fff;
+    border-radius: 5px;
+    outline: none;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  /* Стили для выпадающего списка */
+  .dropdownWithoutEnter-list {
+    display: block;
+    position: absolute;
+    top: 60px;
+    z-index: 1;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Стили для элементов списка */
+  .dropdownWithoutEnter-list-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Стиль для выбранного элемента списка */
+  .selected {
+    background-color: #f0f0f0;
+  }
+  
+  /* Стиль для элемента списка при наведении */
+  .dropdownWithoutEnter-list-item:hover {
+    background-color: #f0f0f0;
+  }

@@ -1,0 +1,42 @@
+/* <div className={`input_container ${isClickable ? 'input_container__active' : ''}`}>
+            <input id="group_input" type="text" className="input_enter" placeholder={placeholder} value={group} onChange={handleChange}/>
+            <button type="button" className="input_submit" onClick={handleClick}>{command}</button>   
+        </div> */
+
+.input_container{
+    opacity: 0.5;
+    pointer-events: none;
+    height: 40px;
+
+    border: 1px solid black;
+}
+
+.input_container__active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.input_enter{
+    width: 180px;
+    line-height: 40px;
+
+    border: none;
+    outline: none;
+
+    padding: 0;
+    padding-left: 10px;
+
+    box-sizing: border-box;
+}
+
+.input_submit{
+    line-height: 40px;
+    width: 80px;
+
+    border: none;
+    outline: none;
+
+    padding: 0;
+
+    border-left: 1px solid black;
+}

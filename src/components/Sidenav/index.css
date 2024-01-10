@@ -1,0 +1,32 @@
+.sidenav_btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 12px;
+
+    display: block;
+
+    position: absolute;
+    top: calc(50% - 15px);
+    right: 15px;
+
+    line-height: 15px;
+    font-size: 16px;
+
+    padding: 0;
+    margin: 0;
+
+    color: #494949;
+
+    background-color: rgba(63, 63, 63, 0.061);
+
+
+    transition: all .15s ease-in-out;
+}
+
+
+.rs-sidenav-item-active > .sidenav_btn{
+    color: #494949;
+    background-color: rgba(121, 145, 232, 0.15);
+}
+
+

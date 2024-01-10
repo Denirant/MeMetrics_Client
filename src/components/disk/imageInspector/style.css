@@ -1,0 +1,100 @@
+.imageInspector-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 999999999;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--BG-popup, rgba(150, 168, 201, 0.30));
+    backdrop-filter: blur(8px);
+}
+
+.imageInspector-close{
+    position: absolute;
+    top: 40px;
+    right: 32px;
+
+    width: 32px;
+    height: 32px;
+
+    background-color: #fff;
+    border-radius: 50%;
+
+    background-image: url('../../../assets/img/Close.svg');
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+
+    z-index: 100;
+}
+
+.imageInspector-controls{
+    position: absolute;
+    top: 24px;
+
+    border-radius: 12px;
+    background: var(--Txt-accent, #4877f9);
+
+    padding: 16px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    width: 276px;
+}
+
+.imageInspector-controls button{
+    border: 1px solid white;
+
+    margin: 0;
+
+    color: var(--Txt-btn-primary, #FFF);
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: 0.28px;
+
+    padding: 8px 16px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.imageInspector-body{
+    background-position: center;
+    background-size: cover;
+
+    width: fit-content;
+    height: fit-content;
+
+    user-select: none;
+
+    cursor: grab;
+}
+
+.imageInspector-body img{
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    border-radius: 12px;
+}

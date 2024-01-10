@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+    <g transform="translate(12 12) scale(0.75)">
+      <polygon fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="3 9 16 3 29 9 3 9"></polygon>
+      <line x1="3" x2="29" y1="29" y2="29" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></line>
+      <line x1="5" x2="27" y1="26" y2="26" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></line>
+      <line x1="5" x2="27" y1="12" y2="12" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></line>
+      <line x1="7" x2="7" y1="15" y2="23" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></line>
+      <line x1="13" x2="13" y1="15" y2="23" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></line>
+      <line x1="19" x2="19" y1="15" y2="23" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></line>
+      <line x1="25" x2="25" y1="15" y2="23" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></line>
+    </g>
+  </svg>
+  

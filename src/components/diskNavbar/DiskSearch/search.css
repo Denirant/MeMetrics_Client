@@ -1,0 +1,417 @@
+.navigation_search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
+
+    margin-left: auto;
+}
+
+
+.navigation_search_input{
+    position: relative;
+
+    height: 24px;
+    box-sizing: content-box;
+
+    cursor: text;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    padding: 8px 16px;
+
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: var(--bg-input, #FFF);
+
+    width: 302px;
+    transition: all .3s ease-in-out;
+}
+
+.navigation_search_input-loop{
+    width: 24px;
+    height: 24px;
+
+    background-color: white;
+    background-image: url('../../../assets/img/Search.svg');
+}
+
+
+.navigation_search_input input{
+    border: none;
+    /* border-left: 1px solid #A4A4A4; */
+    padding-left: 8px;
+
+    width: 100%;
+    height: 24px;
+
+    color: var(--txt-secondary, #000000);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+}
+
+
+.navigation_search_input input:focus{
+    outline: none;
+}
+
+
+.navigation_search_input:has(input:focus){
+    width: 554px;
+    border: 1px solid var(--txt-accent, #4876F9);
+
+}
+
+
+.clear{
+    cursor: pointer !important;
+}
+
+
+
+
+/* <div className='navigation_search'>
+        <div className='navigation_search_input'>
+          <div className='navigation_search_input-loop'></div>
+          <input type="text" placeholder='Search' value={search} onChange={handleChange}/>
+          <div className='navigation_search_input-clear' onClick={() => setSearch('')}></div>
+        </div>
+        <div className='navigation_search_settings' onClick={() => setIsOpen(true)}>
+          <div className='navigation_search_header'>
+            <p className='navigation_search_title'>Filters</p>
+            <img className='navigation_search_close' src={CloseIcon} alt="icon" onClick={() => setIsOpen(false)}/>
+          </div>
+          <ul className='navigation_search_container'>
+            <li className='navigation_search_item'>
+              <input type="checkbox" id='search_folders'/>
+              <label htmlFor="search_folders">Folders</label>
+            </li>
+            <li className='navigation_search_item'>
+              <input type="checkbox" id='search_files'/>
+              <label htmlFor="search_files">Files</label>
+            </li>
+          </ul>
+        </div>
+    </div> */
+
+
+
+
+.navigation_search_settings{
+    width: 24px;
+    height: 24px;
+
+    user-select: none;
+    cursor: pointer;
+
+    padding: 8px;
+    box-sizing: content-box;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: var(--bg-input, #FFF);
+
+
+    background-image: url('../../../assets/img/filterOff.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+
+.filter_dropdown{
+    position: absolute; 
+    top: 56px;
+    right: 0;
+
+    border-radius: 10px;
+    background: var(--bg-popup-default, #FFF);
+    /* Shadow */
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.25);
+
+    padding: 8px 0 0 0;
+
+    width: 212px;
+    box-sizing: border-box;
+
+    z-index: 10000;
+
+    cursor: default;
+}
+
+
+.navigation_search_header{
+
+    padding: 8px 16px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+
+.navigation_search_title{
+    color: var(--txt-primary, #1C1C1C);
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: 0.5px;
+
+
+    margin-bottom: 0px;
+
+}
+
+.navigation_search_close{
+    cursor: pointer;
+}
+
+
+.navigation_search_container{
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+    list-style-type: none;
+}
+
+
+.navigation_search_item{
+    padding: 14px 32px;
+}
+
+
+.navigation_search_item:hover{
+    background-color: #EFF2FF;
+}
+
+.navigation_search_item input{
+    display: none;
+}
+
+.navigation_search_item label{
+    padding-left: 40px;
+
+    display: block;
+
+    color: var(--txt-primary, #1C1C1C);
+    font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px !important; /* 171.429% */
+
+    position: relative;
+
+    cursor: pointer;
+    
+
+    transition: all .15s ease-in-out;
+}
+
+.navigation_search_item label:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 24px;
+    height: 24px;
+
+    content: "";
+
+
+    border-radius: 4px;
+    border: 1px solid var(--stroke, #E8E8E8);
+
+    box-sizing: border-box;
+
+}
+
+
+.navigation_search_item input:checked + label:before{
+    border: 1px solid var(--stroke, #4876F9);
+    background-color: #4876F9;
+
+    background-image: url('../../../assets/img/check.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 95%;
+}
+
+
+
+.search_btn{
+    padding: 12px 16px;
+
+    border-radius: 8px;
+    background: var(--btn-primary-default, #4876F9);
+
+
+    color: var(--txt-btn-primary, #FFF);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: 0.28px;
+
+
+    width: 112px;
+
+    animation-name: showSearch;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes showSearch {
+    0%{
+        opacity: 0;
+        width: 0px;
+    }
+    100%{
+        opacity: 1;
+        width: 112px;
+    }
+}
+
+
+
+.suggetions{
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    width: 700px;
+    max-height: 450px;
+
+    background-color: white;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.20);
+    border-radius: 8px;
+
+    z-index: 1000;
+
+
+    display: flex;
+    flex-direction: column;
+}
+
+.suggetions > h1{
+    color: var(--txt-primary, #1C1C1C);
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: 0.5px;
+
+    padding: 8px 16px;
+    margin: 0;
+}
+
+.suggetions ul{
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+    
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.search-file{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 12px 16px;
+
+    cursor: pointer;
+}
+
+.search-file:hover{
+    background: var(--bg-popup-hover, #EFF2FF);
+
+}
+
+.search-file--image{
+    width: 20px;
+    height: 20px;
+}
+
+.search-file--content{
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 16px;
+}
+
+
+.search-file--name{
+    color: var(--txt-primary, #1C1C1C);
+    font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+
+}
+
+.search-file--path{
+    color: var(--txt-secondary, #A4A4A4);
+    font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
+    font-family: 'Nunito';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 133.333% */
+
+}
+
+.search-file--date{
+    color: var(--txt-primary, #1C1C1C);
+    font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
+    font-family: 'Nunito';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 133.333% */
+
+
+    margin-left: auto;
+
+}
+
+/* <div className='suggetions'>
+              <h1>Results</h1>
+              <ul>
+                {
+                  searchFilesArray.map(el => (
+                    <li className='search-file' onClick={(e) => handleSelectItem(el)}>
+                      <img className='search-file--image' src="" alt="" />
+                      <div className='search-file--content'>
+                        <h2 className='search-file--name'></h2>
+                        <p className='search-file--path'></p>
+                      </div>
+                      <p className='search-file--date'></p>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div> */

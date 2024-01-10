@@ -1,0 +1,23 @@
+/* <div style={style.navbar_container}>
+        <h1>MeMetrics</h1>
+        <div style={style.navbar_user}>
+            <button style={style.navbar_button}>Register</button>
+            <button style={style.navbar_button}>Login</button>
+        </div>
+    </div> */
+
+
+.navbar_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 70%;
+}
+
+.navbar_user{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}

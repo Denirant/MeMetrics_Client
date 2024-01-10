@@ -1,0 +1,67 @@
+/* <div className='amountAnalytic'>
+      <h2 className='amountAnalytic_title' style={titleStyle}>{titleValue}</h2>
+      <div className='amountAnalytic_content'>
+        <p className='amountAnalytic_content--main'>{prefixValue}{formatNumberWithCommas(currentValue)}</p>
+        <p className={`amountAnalytic_content--value ${(calculatePercentageChange(currentValue, prevValue)[0] === '-') ? 'negative' : 'positive'}`}>
+            <img src={(determiningDirection) ? ArrowStatUp : ArrowStatDown} alt="stat_info" />
+            {calculatePercentageChange(currentValue, prevValue)}
+        </p>
+      </div>
+    </div> */
+
+.amountAnalytic{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.amountAnalytic_title{
+    color: var(--Txt-secondary, #A4A4A4);
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.amountAnalytic_content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+}
+
+.amountAnalytic_content > p{
+    width: 100%;
+    margin: 0;
+}
+
+.amountAnalytic_content--main{
+    color: var(--Txt-primary, #1C1C1C);
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 400;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.amountAnalytic_content--value img{
+    object-fit: cover;
+    margin-right: 3px;
+}
+
+.amountAnalytic_content--value{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+.amountAnalytic_content--value.negative{
+    color: #DB371F;
+}
+
+.amountAnalytic_content--value.positive{
+    color: #2EBDAB;
+}

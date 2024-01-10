@@ -1,0 +1,181 @@
+/* <div className="custom-toolbar">
+      <div className="custom-toolbar-section">
+        <button onClick={goToBack}>{'<'}</button>
+        <span>{toolbar.label}</span>
+        <button onClick={goToNext}>{'>'}</button>
+      </div>
+      <div className="custom-toolbar-section">
+        <button onClick={goToToday}>Today</button>
+      </div>
+    </div> */
+
+
+.custom-toolbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-toolbar-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.custom-toolbar-section span{
+    color: var(--gray-900, #2D3036);
+text-align: center;
+font-family: Nunito;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 32px; /* 160% */
+letter-spacing: -0.2px;
+
+}
+
+.custom-toolbar-section .back{
+    width: 24px;
+    height: 24px;
+
+    cursor: pointer;
+    background-image: url('../../assets/img/backArrow.svg');
+}
+
+.custom-toolbar-section .forward{
+    width: 24px;
+    height: 24px;
+
+    cursor: pointer;
+    background-image: url('../../assets/img/forwardArrow.svg');
+
+}
+
+.custom-toolbar-section .today{
+    color: var(--Accent, #4876F9);
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.32px;
+
+}
+
+.rbc-calendar{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rbc-header{
+    border: none;
+
+    border-top: 1px solid var(--Stroke, #E8E8E8);
+    border-bottom: 1px solid var(--Stroke, #E8E8E8);
+    background: var(--BG, #FFF);
+    padding: 12px 8px;
+}
+
+.rbc-header span{
+    color: var(--Txt-secondary, #A4A4A4);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 114.286% */
+
+}
+
+.rbc-header:first-of-type{
+    border-top-left-radius: 16px;
+    border-left: 1px solid var(--Stroke, #E8E8E8);
+}
+
+.rbc-header:last-of-type{
+    border-top-right-radius: 16px;
+    border-right: 1px solid var(--Stroke, #E8E8E8);
+}
+
+.rbc-row .rbc-month-header{
+    border: none;
+}
+
+.rbc-month-view{
+    border: none;
+}
+
+.rbc-month-row{
+    border-left: 1px solid var(--Stroke, #E8E8E8);
+    border-right: 1px solid var(--Stroke, #E8E8E8);
+}
+
+.rbc-off-range-bg{
+    opacity: 1;
+    background: repeating-linear-gradient( -45deg, #e8e8e846, #e8e8e846 1px, white 2px, rgba(244, 244, 244, 0.815) 10px );
+    background-color: white !important;
+}
+
+.rbc-day-bg {
+    border: none !important;
+
+    border-left: 1px solid var(--Stroke, #E8E8E8) !important;
+}
+
+.rbc-day-bg:first-of-type{
+    border-left: none !important;
+}
+
+.rbc-month-row:last-of-type{
+    border-bottom: 1px solid var(--Stroke, #E8E8E8) !important;
+}
+
+.rbc-month-row:last-of-type{
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+
+.rbc-today{
+    background: #c6d5ff36;
+}
+
+.rbc-button-link{
+    color: var(--Txt-primary, #1C1C1C);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 16px */
+
+    margin-top: 8px !important;
+}
+
+.rbc-row-segment{
+    padding: 0 8px !important; 
+
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.rbc-event{
+    background-color: #4876F9 !important;
+}
+
+.rbc-event-content{
+    color: white !important;
+}
+
+.rbc-day-bg:not(.rbc-today):hover{
+    background-color: #4877f90b;
+}
+
+.rbc-event-content {
+    /* white-space: pre-line !important; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

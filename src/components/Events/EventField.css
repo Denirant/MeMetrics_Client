@@ -1,0 +1,62 @@
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .timeline-header {
+    margin-bottom: 20px;
+  }
+  
+  .add-event-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .timeline-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .timeline-dates {
+    display: grid;
+    grid-template-columns: repeat(31, 1fr);
+    gap: 5px;
+  }
+  
+  .timeline-date {
+    text-align: center;
+    font-size: 12px;
+  }
+  
+  .timeline-events {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .timeline-row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .event {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  

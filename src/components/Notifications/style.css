@@ -1,0 +1,266 @@
+/* <div className="notification" style={{ backgroundColor: getBackgroundColor() }}>
+        <img src={getIcon()} alt="notification icon" />    
+        <span>{notification.text}</span>
+        <button className='notification_clr' onClick={handleRemove}></button>
+    </div> */
+
+.notification .notification{
+    max-width: 700px;
+
+    width: fit-content;
+    
+    padding: 16px 16px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+    border-radius: var(--radius-8, 8px);
+    box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.10);
+
+
+    user-select: none;
+
+    cursor: pointer;
+}
+
+
+.notification img{
+    width: 24px;
+    height: 24px;
+}
+
+.notification span{
+    width: 100%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+
+    color: var(--Txt-btn-primary, #FFF);
+    font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
+    font-family: 'Nunito';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+
+}
+
+
+.notification button{
+    width: 24px;
+    height: 24px;
+
+
+    cursor: pointer;
+
+
+    background-image: url('../../assets/img/NotificationActionIcons/Close.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    background-color: rgba(0, 0, 0, 0);
+
+    pointer-events: all;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* return (
+    <div className="notification-interactive">
+      <div className='notification-interactive--header'>
+        <img src={notification.image} alt="Notification" />
+        <div className='notification-interactive--text'>
+          <h3>{notification.title}</h3>
+          <p>{notification.text}</p>
+        </div>
+        <button className="remove-button" onClick={handleRemove}>X</button>
+      </div>
+      <div className='notification-interactive--control'>
+        <button onClick={notification.handleCancel}>Cancel</button>
+        <button onClick={notification.handleOpen}>Open</button>
+      </div>
+    </div>
+  ); */
+
+
+
+.notification-interactive{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 24px;
+
+    border-radius: 12px;
+    background: var(--BG-Input, #FFF);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
+    animation-name: interactiveShow;
+    animation-duration: 5s;
+}
+
+/* 0 - 0.25 - 4.75 - 5 */
+
+
+
+@keyframes interactiveShow {
+    0%{
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    5%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    95%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+}
+
+.notification-interactive--header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification-interactive--image{
+    width: 60px;
+    height: 60px;
+
+    border-radius: 60px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.notification-interactive--text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+
+    width: 368px;
+}
+
+.notification-interactive--text h3{
+    margin: 0;
+    padding: 0;
+
+    color: var(--Txt-primary, #1C1C1C);
+    font-family: 'Nunito';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%; /* 19.8px */
+
+}
+
+.notification-interactive--text p{
+    color: var(--Txt-secondary, #A4A4A4);
+    font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 128.571% */
+
+    margin: 0;
+    padding: 0;
+}
+
+
+.notification-interactive--header > .remove-button{
+    pointer-events: all;
+
+    width: 28px;
+    height: 28px;
+
+    background-image: url('../../assets/img/Close.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-color: white;
+
+    align-self: start;
+}
+
+
+
+
+
+.notification-interactive--control{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    gap: 12px;
+}
+
+.notification-interactive--control button{
+    border-radius: 8px;
+    border: 1px solid var(--Btn-secondary-default, #e1e0e0);
+
+    width: 148px;
+    height: fit-content;
+
+    padding: 12px 16px;
+
+    background-color: white;
+
+
+
+
+    color: var(--Txt-primary, #1C1C1C);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: 0.28px;
+
+
+    pointer-events: all;
+
+
+    transition: all .3s ease-in-out;
+
+}
+
+.notification-interactive--control button:hover{
+    background-color: rgb(238, 238, 238);
+    border-color: rgb(202, 202, 202);
+}
+
+
+.notification-interactive--control button:last-of-type{
+    border-radius: 8px;
+    background: var(--Btn-primary-default, #4876F9);
+    border: 1px solid var(--Btn-secondary-default, #4876F9);
+    color: var(--Txt-btn-primary, #FFF);
+}
+
+
+.notification-interactive--control button:last-of-type:hover{
+    background-color: #6485de;
+    border-color: #6485de;
+}

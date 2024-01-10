@@ -1,0 +1,218 @@
+.employee-container{
+  padding: 30px;
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: fit-content;
+
+  height: fit-content;
+}
+
+.employee-container h1{
+  font-size: 26px;
+  line-height: 30px;
+  text-align: left;
+  font-weight: 900;
+
+  font-family: 'Nunito', sans-serif;
+}
+
+
+.list-container {
+    margin-top: 40px;
+
+    width: 300px;
+    height: 400px;
+    overflow-y: auto;
+
+
+  }
+
+  .list-container::-webkit-scrollbar{
+    display: none;
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: relative;
+  }
+  
+  .list:has(.list-item.selected) {
+    align-items: center;
+    position: relative;
+
+    height: 100%;
+  }
+  
+  .list-item {
+    display: block;
+    height: 80px;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    transition: height .3s ease-out; /* Добавлен переход для высоты */
+    transition-delay: 10;
+
+    box-sizing: border-box;
+  }
+
+  .list-item + .list-item{
+    border-top: 1px solid #f3f3f3df;
+  }
+  
+  .list-item:not(.hidden):not(.selected):hover {
+    background-color: #f6f6f6c2;
+  }
+  
+  .list-item.selected {
+    height: 400px;
+    width: 100%;
+    background-color: #ffffff;
+
+
+    border-color: white;
+
+    /* position: absolute;
+    top: 0; */
+  }
+  
+  .list-item.hidden {
+    height: fit-content;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+
+    position: absolute;
+    top: -150px;
+
+    opacity: 0;
+  }
+
+
+  .list-item-content{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    height: 100%;
+  }
+
+
+
+
+
+
+  /* <div className='list-item-content'>
+  {isSelected && <button onClick={() => onClose()}>Close</button>}
+    <img src={icon} alt={name} />
+    <div>
+      <h3>{name} {surname}</h3>
+      <span className={`status ${isOnline ? 'active' : 'inactive'}`}>
+        {isOnline ? 'Active' : 'Inactive'}
+      </span>
+      <p>{title}</p>
+    </div>
+</div> */
+
+.text-caonainer{
+  width: fit-content;
+}
+
+.text-caonainer h3{
+  margin: 0;
+
+  font-size: 22px;
+}
+
+.text-caonainer p{
+  margin: 0;
+  font-size: 16px;
+
+  margin-top: 3px;
+}
+
+.list-item-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 18px;
+}
+
+.list-item-content .card_image{
+  width: 40px;
+  height: 40px;
+
+  padding: 0;
+}
+
+.image-container{
+  width: fit-content;
+
+  position: relative;
+
+  z-index: 1000;
+}
+
+.image-container img {
+  display: block;
+
+
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.image-container::before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  content: "";
+
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+
+}
+
+.image-container.__active::before {
+  background-color: #3dfe8e;
+}
+
+.image-container.__inactive::before {
+  background-color: #fd4141;
+}
+
+.list-item-content .card_info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.list-item-content .card h2 {
+  margin: 0;
+  font-size: 32px;
+  margin-top: 8px;
+}
+
+.list-item-content .card p {
+  margin: 5px 0;
+}
+
+.list-item-content .back_btn{
+  width: 40px;
+  height: 40px;
+
+  font-size: 24px;
+
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+
+  background-color: white;
+}

@@ -1,0 +1,125 @@
+/* div className='selected_container'>
+            <p className='selected_text'>Selected {selectedFiles.length} {selectedFiles.length === 1 ? 'file' : 'files'}</p>
+            <ul className='selected_action__container'>
+                <li className='selected_action'>
+                    <div className='selected_action__share'></div>
+                    <p>Share</p>
+                </li>
+                <li className='selected_action'>
+                    <div className='selected_action__download'></div>
+                    <p>Download</p>
+                </li>
+                <li className='selected_action'>
+                    <div className='selected_action__move'></div>
+                    <p>Move</p>
+                </li>
+                <li className='selected_action'>
+                    <div className='selected_action__delete'></div>
+                    <p>Delete</p>
+                </li>
+            </ul>
+        </div> */
+
+
+.selected_container{
+    position: absolute;
+    bottom: 42px;
+    left: calc(50% - 339px);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 32px;
+
+    padding: 16px;
+
+    border-radius: 12px;
+    background: var(--txt-accent, #4877f9b3);
+    box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.10);
+
+
+    user-select: none;
+
+}
+
+.selected_container > p{
+    width: 156px;
+
+    color: var(--txt-btn-primary, #FFF);
+    font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 171.429% */
+
+}
+
+.selected_action__container{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    list-style-type: none;
+
+    margin-top: 0px;
+    padding: 0px;
+}
+
+.selected_action{
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 8px;
+    /* border: 1px solid var(--btn-secondary-default, #E8E8E8); */
+
+    cursor: pointer;
+
+
+    background-color: #4877f9bd;
+
+}
+
+.selected_action__share, .selected_action__download, .selected_action__move, .selected_action__delete{
+    width: 16px;
+    height: 16px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    filter: invert(100%);
+}
+
+.selected_action__share{
+    background-image: url('../../assets/img/DropDown/Share.svg');
+}
+
+.selected_action__download{
+    background-image: url('../../assets/img/DropDown/Download.svg');
+}
+
+.selected_action__move{
+    background-image: url('../../assets/img/DropDown/Move.svg');
+}
+
+.selected_action__delete{
+    background-image: url('../../assets/img/DropDown/Trash.svg');
+}
+
+
+.selected_action p{
+    color: var(--txt-btn-primary, #FFF);
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: 0.28px;
+
+}

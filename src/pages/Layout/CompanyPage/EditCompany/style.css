@@ -1,0 +1,314 @@
+/* {!data && <form method='POST' className="company_add_search" onSubmit={INN_info}>
+                <h1 className="company_add_search__title">Add company</h1>
+                <div className="company_add__close"></div>
+                <div className="company_add_search__input">
+                    <label htmlFor="" id="inn_value" className="company_add_search__label">
+                        ИНН
+                        <input type="text" id='inn_value' className="company_add_search__input"/>
+                    </label>
+                </div>
+                <div className="company_add__controls">
+                    <button className="company_add__controls--btn">Cancel</button>
+                    <button className="company_add__controls--btn btn_blue">Get information</button>
+                </div>
+            </form>} */
+
+.company_add {
+  width: 100vw;
+  height: 100%;
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  background-color: rgba(150, 168, 201, 0.3);
+  z-index: 100000;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.company_add_search, .company_add_info {
+  display: block;
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 28px;
+
+  border-radius: 12px;
+  background: var(--BG, #fff);
+
+  position: relative;
+}
+
+.company_add_info{
+    gap: 16px;
+}
+
+.company_add_search__title {
+  display: block;
+  color: var(--Txt-primary, #1c1c1c);
+  font-family: Nunito;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 26.4px */
+}
+
+.company_add__close {
+  position: absolute;
+
+  top: 40px;
+  right: 40px;
+
+  width: 28px;
+  height: 28px;
+
+  background-image: url("../../../../assets/img/Close.svg");
+
+  cursor: pointer;
+}
+
+.company_add__close:hover {
+  opacity: 0.8;
+}
+
+.company_add_search__label {
+  width: 100% !important;
+  height: fit-content !important;
+  padding: 16px;
+
+  text-indent: 0 !important;
+
+  border-radius: 12px !important;
+  background: var(--BG-menu-nav, #f9fafb) !important;
+  border: none !important;
+
+  display: block;
+
+  color: var(--Txt-secondary, #a4a4a4);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Nunito;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 133.333% */
+
+  box-sizing: border-box;
+
+  cursor: text !important;
+}
+
+.company_add_search__label:has( textarea){
+  width: 530px !important;
+  margin-top: 16px;
+}
+
+.company_add_search__input {
+  width: 100%;
+  color: var(--Txt-primary, #1c1c1c);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Nunito;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+
+  border: none;
+  outline: none;
+
+  margin-top: 8px;
+
+  background-color: rgba(255, 255, 255, 0);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+textarea.company_add_search__input{
+  width: 500px;
+}
+
+.company_add_search__input_select{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.company_add_search__input_preview{
+  border-radius: 64px;
+  overflow: hidden;
+
+  width: 78px;
+  height: 78px;
+
+  cursor: pointer;
+
+
+  transition: all .3s ease-in-out;
+}
+
+.company_add_search__input_preview:hover{
+  opacity: .75;
+}
+
+.company_add_search__input:has(.company_add_search__input_preview) .company_add_search__input{
+  width: 400px !important;
+}
+
+.company_add_search__input_preview img{
+  object-fit: cover;
+
+}
+
+.company_add_search__input_preview + span{
+  white-space: nowrap;
+  margin-top: 12px;
+  display: block;
+}
+
+.company_add_search__label::after {
+  display: none;
+}
+
+.company_add__controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  gap: 16px;
+}
+
+.company_add__controls--btn {
+  display: block;
+  padding: 12px 16px;
+
+  border-radius: 8px;
+  border: 1px solid var(--Btn-secondary-default, #e8e8e8);
+
+  color: var(--Txt-primary, #1c1c1c);
+  text-align: center;
+  font-family: Nunito;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: 0.28px;
+
+  background-color: white;
+  width: 125px;
+  box-sizing: content-box;
+}
+
+.company_add__controls--btn.btn_blue {
+  color: white;
+  background-color: #4876f9;
+  border-color: #4876f9;
+}
+
+.company_add__controls--btn:hover {
+  opacity: 0.8;
+}
+
+.company_add_info__text{
+    color: var(--Accent, #4876F9);
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Nunito;
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: 16px; /* 133.333% */
+
+margin-top: 12px;
+}
+
+.inputs_row{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.inputs_row .company_add_search__input, .inputs_row .company_add_search__label{
+    width: 100% !important;
+}
+
+.company_add_info .company_add__controls{
+    margin-top: 28px;
+}
+
+
+
+
+/* <div className="company_add_info__toggle">
+            <h2 className="company_add_info__toggle--title">
+              Информация о компании
+            </h2>
+            <div
+              className={`company_add_info__toggle--arrow ${
+                isAddition ? "active" : ""
+              }`}
+              onClick={() => setIsAddition(!isAddition)}
+            ></div>
+          </div>
+          <div className={`info_adition ${isAddition ? "open" : ""} `}> */
+
+.company_add_info__toggle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company_add_info__toggle--title{
+    color: var(--Txt-primary, #1C1C1C);
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%; /* 26.4px */
+
+    margin-top: 12px;
+    margin-bottom: -4px;
+}
+
+.company_add_info__toggle--arrow{
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    background-image: url('../../../../assets/img/Arrow-down.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    transition: all .3s ease-in-out;
+}
+
+.company_add_info__toggle--arrow.active{
+    transform: rotateZ(180deg);
+}
+
+.info_adition {
+    overflow: scroll;
+    height: 380px;
+    transition: all .3s ease-in-out;
+  }
+  
+  .info_adition::-webkit-scrollbar {
+    width: 0; /* Ширина скроллбара */
+    height: 0; /* Высота скроллбара */
+  }
+  
+  .info_adition::-webkit-scrollbar-thumb {
+    background: transparent; /* Цвет ползунка скроллбара */
+  }
+
+
+/* .info_adition */

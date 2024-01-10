@@ -1,0 +1,50 @@
+.downloader {
+  height: 300px;
+  width: 300px;
+  position: fixed;
+  background-color: #566885;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  border-radius: 12px;
+  overflow-y: auto;
+}
+.downloader__header {
+  display: flex;
+  justify-content: space-between;
+}
+.downloader__title {
+  color: #E9E6E6;
+  font-size: 1.2rem;
+}
+.downloader__close {
+  padding: 3px;
+}
+.download-file {
+  background-color: #E9E6E6;
+  border-radius: 8px;
+  margin: 5px 0;
+  padding: 5px 10px;
+}
+.download-file__header {
+  display: flex;
+  justify-content: space-between;
+}
+.download-file__progress-bar {
+  height: 1rem;
+  border-radius: 8px;
+  background-color: #566885;
+  display: flex;
+  margin: 3px 0;
+}
+.download-file__download-bar {
+  background-color: rgb(25, 249, 25);
+  border-radius: 8px;
+  transition: width .2s linear;
+}
+.download-file__percent {
+  color: #E9E6E6;
+  left: 50%;
+  position: absolute;
+}
+/*# sourceMappingURL=uploader.css.map */

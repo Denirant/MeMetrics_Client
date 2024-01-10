@@ -1,0 +1,22 @@
+.preview_product{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+
+    width: 100%;
+
+}
+
+.preview_product-image{
+    /* width: 300px; */
+    height: 200px;
+
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.preview_product-subinfo{
+    display: flex;
+    justify-content: space-between;
+}

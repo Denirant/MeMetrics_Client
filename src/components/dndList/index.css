@@ -1,0 +1,61 @@
+.container-dnd {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  background-color: #f9f9f9;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  margin-top: 40px;
+}
+
+.container-dnd .card-dnd {
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.header-dnd {
+  background-color: #4876F9;
+  padding: 0.9rem;
+  color: #fff;
+  font-size: 0.9rem;
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.item-card-dnd {
+  width: 14rem;
+  background-color: #fff;
+  border: 1px solid#f1f2f6;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+  border-radius: 0.3rem;
+  margin: 0.7rem;
+}
+
+.container-dnd .label-dnd {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #2f3542;
+  margin-left: 0.4rem;
+
+  white-space: nowrap;
+}
+
+.container-dnd .drag-drop-list-container-dnd {
+  padding: "1.2rem";
+}
+
+.container-dnd .material-symbols-outlined-dnd {
+  width: 24px;
+  height: 24px;
+
+  background-image: url('../../assets/img/marker.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}

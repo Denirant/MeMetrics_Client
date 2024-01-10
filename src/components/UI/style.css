@@ -1,0 +1,15 @@
+.ui_btn__add{
+    background-image: url('https://img.icons8.com/ios-glyphs/256/plus-math.png');
+}
+
+.ui_btn__delete{
+    background-image: url('https://img.icons8.com/material-rounded/256/delete-forever.png');
+}
+
+.ui_btn__collapse_group{
+    background-image: url('https://img.icons8.com/ios-glyphs/256/disconnected.png');
+}
+
+.ui_btn__remove{
+    background-image: url('https://img.icons8.com/ios-filled/256/delete-file.png');
+}

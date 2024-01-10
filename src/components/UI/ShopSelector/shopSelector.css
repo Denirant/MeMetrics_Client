@@ -1,0 +1,77 @@
+/* <li className={`selector_container ${(status) ? 'selector_container__active' : ''}`} onClick={handleSelect}>
+            <div className={`selector_check ${(status) ? 'selector_check__active' : ''}`}></div>
+            <div>
+                <p className='selector_text'>{name}</p>
+                <p className='selector_text'>{market}</p>
+            </div>
+        </li> */
+
+.selector-short-container{
+    width: 100%;
+    padding: 30px 22px;
+
+    box-sizing: border-box;
+
+    border-radius: 20px;
+    border: 1px solid rgb(234, 234, 234);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
+
+    transition: all .1s ease-in-out;
+}
+
+.selector-short-container:hover{
+    border: 1px solid rgba(175, 204, 254, 0.654);
+    background: rgba(199, 229, 255, 0.208);   
+}
+
+.selector-short-container.selector-short-container__active{
+    border: 1px solid rgba(149, 174, 196, 0.971); 
+}
+
+
+.selector-short-check{
+    width: 28px;
+    height: 28px;
+
+    border: 1px solid rgba(76, 163, 239, 0.971);
+    border-radius: 6px;
+
+    background-color: white;
+}
+
+.selector-short-check.selector-short-check__active{
+    background-color: rgba(76, 163, 239, 0.971);
+
+    background-image: url('https://img.icons8.com/?size=512&id=98955&format=png');
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+}
+
+.selector-short-content{
+    width: 90%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.selector-short-image{
+    width: 26px;
+    height: 26px;
+}
+
+.selector-short-text{
+    font-size: 16px;
+    margin-left: 4px;
+}
+
+.selector-short-pallete{
+    margin-left: auto;
+}

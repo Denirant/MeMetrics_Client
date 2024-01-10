@@ -1,0 +1,1 @@
+export const createFile = ({ name }) => ({ name, type: "file" });

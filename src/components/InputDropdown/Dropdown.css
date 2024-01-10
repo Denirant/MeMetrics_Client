@@ -1,0 +1,147 @@
+.company_add_search__label .dropdown__container {
+  width: 100%;
+  user-select: none;
+
+  height: fit-content;
+}
+
+.dropdown__input {
+  width: 100%;
+}
+
+.dropdown__input::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  content: "";
+
+  width: 24px;
+  height: 24px;
+
+  background-image: url("../../assets/img/Arrow-up.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  opacity: 0.45;
+
+  transition: transform 0.15s ease-in;
+}
+
+.dropdown__input.readOnly::after{
+  display: none;
+}
+
+.dropdown__input.readOnly input{
+  cursor: default !important;
+}
+
+.dropdown__input:has(+ .active)::after {
+  transform: rotateZ(180deg);
+}
+
+.dropdown__input input {
+  width: 100%;
+  color: var(--Txt-primary, #1c1c1c);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Nunito;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+
+  border: none;
+  outline: none;
+
+  margin-top: 16px;
+
+  background-color: rgba(255, 255, 255, 0);
+
+  cursor: pointer;
+
+  user-select: none !important;
+}
+
+.dropdown__content {
+  width: 100%;
+
+  padding: 4px 0;
+  top: 64px;
+}
+
+.dropdown__content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.dropdown__content ul li {
+  padding: 12px 16px;
+
+  display: flex;
+  flex-direction: row;
+
+  gap: 16px;
+
+  color: var(--Txt-primary, #1c1c1c);
+  font-feature-settings: "cv11" on, "cv01" on, "ss01" on;
+  font-family: Nunito;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+
+  cursor: pointer;
+}
+
+.dropdown__content ul li:hover {
+  background-color: #ecf1ff;
+}
+
+.dropdown__content ul li.active {
+  color: #4876f9;
+
+  font-feature-settings: "cv11" on, "cv01" on, "ss01" on;
+  font-family: Nunito;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+}
+
+.dropdown_checkmark {
+  width: 24px;
+  height: 24px;
+
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.dropdown__content ul li.active .dropdown_checkmark {
+  background-image: url("../../assets/img/CheckBlue.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dropdown_btn {
+  width: 100%;
+
+  color: var(--Txt-secondary, #484848);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Nunito;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 24px */
+
+  background-color: white;
+
+  padding: 8px 0;
+
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.dropdown_btn:hover{
+    background-color: #eff1f5;
+}

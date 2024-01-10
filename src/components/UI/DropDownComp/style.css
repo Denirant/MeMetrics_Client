@@ -1,0 +1,134 @@
+.drop_wrapper{
+    display: flex;
+    align-items: center;
+
+    
+    /* border-radius: 14px; */
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.219);
+
+    border: 1px solid black;
+
+    opacity: 0.5;
+
+    pointer-events: none;
+}
+
+.drop_wrapper__available{
+    pointer-events: all;
+    
+    opacity: 1;
+}
+
+.drop_conteiner{
+    position: relative;
+    width: 150px;
+    height: 40px;
+}
+
+
+.drop_conteiner-trigger{
+    width: 100%;
+    line-height: 40px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    transition: box-shadow .4s ease;
+    cursor: pointer;
+    
+    background-color: white;
+    
+    /* border-radius: 14px 0px 0px 14px; */
+}
+
+
+.menu-trigger span{
+    font-family: 'Poppins Semibold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    color: #151515;
+    margin: 0 10px;
+    background-color: none;
+}
+
+.drop_conteiner-menu{
+    background: #fff;
+    /* border-radius: 12px; */
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    box-shadow: 0 1px 8px rgba(0,0,0,.3);
+    opacity: 0;
+    text-align: center;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity .4s ease, transform .4s ease, visibility .4s ease;
+}
+
+.drop_menu-groups{
+    list-style-type: none;
+    width: 100%;
+    padding: 20px 0px;
+    margin: 0 auto;
+}
+.drop_menu-group{
+    cursor: pointer;
+}
+
+.drop_menu-group + .drop_menu-group{
+    margin-top: 15px;
+}
+
+
+.drop_conteiner-menu__active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+    z-index: 1;
+}
+a{
+    text-decoration: none;
+    color: #151515;
+}
+
+
+.drop_insert{
+    width: 80px;
+    line-height: 40px; 
+
+    border: none;
+    outline: none;
+    border-left: 1px solid black;
+}
+/* 
+
+.menu-trigger::before{
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: calc((50% - 4.5px));
+    width: 5px;
+    height: 5px;
+    border: 2.5px solid #6A983C;
+    transform: rotate(45deg);
+    border-top: none;
+    border-left: none;
+    transition: all .4s ease-in-out;
+}
+
+.menu-trigger:hover::before{
+    border-color: #a7e866;
+}
+
+.menu-trigger__active::before{
+    transform: rotate(225deg);
+    top: calc((50% - 2px));
+}
+
+.insert_div{
+    display: flex;
+} */

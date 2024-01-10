@@ -1,0 +1,165 @@
+.container {
+  display: block;
+  width: 400px;
+
+  /* overflow-y: auto; */
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  height: 570px;
+
+
+  animation: expandCard 0.15s ease;
+}
+
+.user-list li {
+  display: flex;
+  align-items: center;
+  background-color: #ecf0f1;
+  color: #333;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-list li:hover {
+  background-color: #dcdde1;
+}
+
+.user-list li img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.user-list li div {
+  flex-grow: 1;
+}
+
+.user-list li h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.user-list li .status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.user-list li .status.active {
+  background-color: #2ecc71;
+}
+
+.user-list li .status.inactive {
+  background-color: #e74c3c;
+}
+
+.card {
+  background-color: #ecf0f1;
+  color: #333;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: expandCard 0.15s ease;
+
+  border: none;
+
+  height: 570px;
+}
+
+@keyframes expandCard {
+  from {
+    transform: scale(0.85);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+
+.card_content{
+  margin-top: 46px;
+
+  display: flex;
+  gap: 18px;
+}
+
+.card_image{
+  width: 100px;
+  height: 100px;
+
+  position: relative;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.card .status {
+  display: inline-block;
+  padding: 10px 10px;
+  border: 5px solid #ecf0f1;;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 400;
+  margin-top: 5px;
+
+  font-size: 12px;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.card .status.active {
+  background-color: #2ecc71;
+}
+
+.card .status.inactive {
+  background-color: #e74c3c;
+}
+
+.card_info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 32px;
+  margin-top: 8px;
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+.back_btn{
+  width: 40px;
+  height: 40px;
+
+  font-size: 24px;
+
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+
+  background-color: white;
+}

@@ -1,0 +1,267 @@
+
+.folder_select{
+    width: 680px;
+    height: 730px;
+
+    padding: 40px;
+
+    box-sizing: border-box;
+    border-radius: 12px;
+    background: var(--bg, #FFF);
+}
+
+
+.folder_select-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.folder_select-header p{
+
+    user-select: none;
+    
+    color: var(--txt-primary, #1C1C1C);
+    font-family: 'Nunito';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%; /* 26.4px */
+
+}
+
+.folder_select-header .close_btn{
+    width: 28px;
+    height: 28px;
+
+    cursor: pointer;
+    user-select: none;
+    
+
+    background-image: url('../../assets/img/Close.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.folder_select-body{
+    height: 521px;
+    margin-top: 22px;
+}
+
+.folder_select-container{
+    width: 100%;
+
+    user-select: none;
+    cursor: pointer;
+}
+
+
+.folder-select-container{
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+
+
+    height: calc(100% - 40px);
+}
+
+.path_container + .folder_select-container{
+    margin-top: 20px;
+}
+
+.folder_select-title{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 12px;
+
+    padding: 16px 16px 16px 56px;
+
+    border-bottom: 1px solid #E8E8E8;
+
+
+    position: relative;
+}
+
+.folder_select-title.selected{
+    background: var(--bg-popup-hover, #EFF2FF);
+}
+
+
+
+.folder_icon{
+
+    display: block;
+    float: left;
+
+    margin-right: 16px;
+
+    width: 24px;
+    height: 24px;
+
+    background-image: url('../../assets/img/currentCloseFolder.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+.folder_select-name{
+    color: var(--txt-secondary, #A4A4A4);
+    font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
+    font-family: 'Nunito';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px; /* 150% */
+}
+
+
+
+.folder_select-btn{
+    width: 24px;
+    height: 24px;
+
+    background-image: url('../../assets/img/Arrow-down.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+
+
+    transform: rotateZ(-90deg);
+
+    transition: all .1s ease-in-out;
+}
+
+
+
+.folder_select-btn.active{
+    transform: rotateZ(0deg);
+}
+
+
+
+
+
+.path_container{
+    display: flex;
+    flex-direction: row;
+
+    gap: 28px;
+
+    list-style-type: none;
+    user-select: none;
+
+    margin-top: 22px;
+    
+
+    width: fit-content;
+}
+
+
+.path_container li{
+    color: var(--txt-secondary, #A4A4A4);
+    text-align: center;
+    font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    position: relative;
+
+}
+
+.folder_select .path_container > .path_container--item:not(:first-of-type)::before{
+    position: absolute;
+    top: 0;
+    left: -20px;
+
+    width: 8px;
+    height: 20px;
+    
+    content: "/";
+
+    color: var(--txt-secondary, #A4A4A4);
+
+    text-align: center;
+    font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+}
+
+
+.path_container li:last-of-type{
+    color: var(--txt-accent, #4876F9);
+}
+
+
+
+/* <div className="folder_select-control">
+                <div className="folder_select-button" onClick={handleCloseForm}>Cancel</div>
+                <div className="folder_select-button blue" onClick={(e) => handleSelectPath(currentPath)}>Select</div>
+            </div> */
+
+.folder_select-control{
+    margin-top: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.folder_select-button{
+    width: 175px;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--txt-primary, #1C1C1C);
+    text-align: center;
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: 0.28px;
+
+    border-radius: 8px;
+    border: 1px solid var(--btn-secondary-default, #E8E8E8);
+
+    cursor: pointer;
+    user-select: none;
+
+    background-color: white;
+}
+
+
+.folder_select-button.blue{
+    background: var(--btn-primary-default, #4876F9);
+    border: 1px solid var(--btn-secondary-default, #4876F9);
+
+    color: white;
+}
+
+
+.folder_select-button.blue.unActive{
+    background: var(--btn-primary-default, #A7BEFF);
+    border: 1px solid var(--btn-secondary-default, #A7BEFF);
+    pointer-events: none;
+}
+
+
+.folder_select-button:hover{
+    border-color: #d6d6d6;
+    opacity: .8;
+}

@@ -1,0 +1,155 @@
+/* Добавьте стили для вашей таблицы */
+.employees table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; /* Добавьте отступ сверху по вашему желанию */
+}
+
+/* Стили для ячеек заголовка */
+.employees th {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+
+  color: var(--fg-foreground-tertiary, #717A8C);
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Nunito;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 153.846% */
+letter-spacing: -0.08px;
+
+border: none;
+border-radius: 12px !important;
+}
+
+.employees th:last-child:hover{
+    background-color: #717a8c00;
+    cursor: default;
+}
+
+.employees tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
+
+  width: 100%;
+
+  padding: 4px 0;
+}
+
+/* Стили для ячеек таблицы */
+.employees td {
+  padding: 8px;
+  /* border-bottom: 1px solid #ddd; */
+
+  width: 100% !important;
+
+  text-align: left;
+
+  color: var(--Txt-primary, #1C1C1C);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.24px;
+}
+
+.employees td img{
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.employees td:nth-child(2) {
+  width: 80% !important;
+}
+
+/* Стили для последней колонки */
+.employees td:last-child {
+  width: 30px !important;
+}
+
+.employees th:first-child {
+    width: 100% !important;
+  }
+
+.employees th:nth-child(2) {
+    width: 80% !important;
+  }
+  
+  /* Стили для последней колонки */
+  .employees th:last-child {
+    width: 30px !important;
+    box-sizing: content-box;
+  }
+
+  .company_workers .employees td .dropdown__btn img{
+    margin: 0;
+  }
+
+/* Дополнительные стили при наведении на ячейку заголовка */
+.employees th:hover {
+  background-color: #f5f5f5;
+}
+
+
+.employees input {
+  width: 100%;
+  padding: 8px;
+
+  padding-left: 40px;
+  padding-right: 40px;
+
+  border-radius: var(--radius-8, 8px);
+
+  border: 1px solid var(--Stroke, #e8e8e8);
+  background: var(--BG-Input, #fff);
+}
+
+.employees-input{
+    position: relative;
+    margin-top: 20px;
+}
+
+.employees-input::before{
+    position: absolute;
+    top: 8px;
+    left: 12px;
+
+    content: "";
+
+    width: 24px;
+    height: 24px;
+
+    background-image: url('../../assets/img/Search.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.employees-input > .clear{
+    position: absolute;
+    top: 8px;
+    right: 12px;
+
+    width: 24px;
+    height: 24px;
+
+    display: block;
+
+    background-image: url('../../assets/img/Close.svg');
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+
+}

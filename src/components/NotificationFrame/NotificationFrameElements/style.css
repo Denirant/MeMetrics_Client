@@ -1,0 +1,190 @@
+/* function Informative({image, title, time, message = null, onAccept = null, onReject = null, isImportant = false, isUnread = true}) {
+    return (
+      <div className={`notification-container ${isImportant ? 'important' : ''}`}>
+          <img src={image} alt="notification icon" className='notification-container__sender'/>
+          <div className='notification-body'>
+              <h2 className='notification-body__title'>{title}</h2>
+              {message && <p className='notification-body_message'>{message}</p>}
+              {(onAccept || onReject) && <div className='notification-body_control'>
+                  {onAccept && <button className='notification-body_btn blue' onClick={onAccept.action}>{onAccept.text}</button>}    
+                  {onAccept && <button className='notification-body_btn' onClick={onReject.action}>{onReject.text}</button>} 
+              </div>}
+              <p className='notification-body_-time'>{formatMessageDate(time)}</p>
+          </div>
+          <button className='close_btn'></button>
+      </div>
+    )
+  } */
+
+
+.notification-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 18px 42px;
+    
+
+    width: 100%;
+
+
+    position: relative;
+    transition: all .15s ease-in-out;
+}
+
+.notification-container:hover{
+    background-color: var(--BG-popup-hover, #ebebeedc);
+    box-shadow: 0px 1px 0px 0px #E4E8EE;
+}
+
+.notification-container.important::before{
+    position: absolute;
+    top: 10%;
+    left: 0;
+
+    content: "";
+
+    height: 80%;
+    width: 3px;
+
+    background-color: #DB371F;
+    border-radius: 0px var(--radius-8, 8px) var(--radius-8, 8px) 0px;
+}
+
+.notification-container + .notification-container{
+    border-top: 1px solid var(--Stroke, #E8E8E8);
+}
+
+.notification-container > img{
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    position: relative;
+    display: block;
+
+    border-radius: 50%;
+    border: 2px solid #d2dbf3;
+}
+
+.notification-container:has(> img.unread):after{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    content: "";
+
+    width: 8px;
+    height: 8px;
+
+    background-color: #4876F9;
+    border-radius: 50%;
+}
+
+.notification-body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 8px;
+
+    width: calc(100% - 75px);
+}
+
+
+.notification-body h2{
+    color: var(--Txt-primary, #1C1C1C);
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 142.857% */
+
+    margin: 0;
+    padding: 0;
+}
+
+
+.notification-body_message{
+    width: calc(100% - 12px);
+
+    padding-left: 12px;
+
+
+    position: relative;
+}
+
+.notification-body_message::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border-radius: 2px;
+    background: var(--gray-gray-200, #DDDEE1);
+
+    width: 4px;
+    height: 100%;
+
+    content: "";
+}
+
+
+.notification-body_control{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.notification-body_btn{
+    border-radius: 8px;
+    border: 1px solid var(--Txt-secondary, #A4A4A4);
+
+    padding: 4px 16px;
+
+    color: var(--Txt-primary, #1C1C1C);
+    text-align: center;
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.28px;
+
+    background-color: white;
+}
+
+
+.notification-body_btn.blue{
+    background: var(--Btn-primary-default, #4876F9);
+    border-color: #4876F9;
+
+    color: white;
+}
+
+
+.notification-body_time{
+    color: var(--Txt-secondary, #A4A4A4);
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+}
+
+
+.close_btn {
+    display: block;
+    width: 18px;
+    height: 18px;
+
+    background-image: url('../../../assets/img/Close.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0);
+}

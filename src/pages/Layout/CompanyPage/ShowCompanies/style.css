@@ -1,0 +1,462 @@
+.companies_hub {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 28px;
+}
+
+.companies_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.companies_header_search {
+  position: relative;
+  border-radius: var(--radius-8, 8px);
+
+  border: 1px solid var(--Stroke, #e8e8e8);
+  background: var(--BG-Input, #fff);
+
+  width: 420px;
+
+  padding: 6px 44px 6px 44px;
+}
+
+.companies_header_seract__input {
+  width: 100%;
+  outline: none;
+  border: none;
+
+  color: black;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Nunito;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 150% */
+}
+
+.companies_header_seract__input::placeholder {
+  color: var(--Txt-secondary, #a4a4a4);
+}
+
+.companies_header_search::before {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 16px;
+
+  width: 24px;
+  height: 24px;
+
+  content: "";
+
+  background-image: url("../../../../assets/img/Search.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.companies_header_seract__clear {
+  position: absolute;
+  top: calc(50% - 12px);
+  right: 16px;
+
+  content: "";
+
+  width: 24px;
+  height: 24px;
+
+  background-image: url("../../../../assets/img/Close.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+}
+/* 
+<div className="companies_header_filter">
+                    <h2 className="companies_header_filter_title">Sort by:</h2>
+                    <ul className="companies_header_filter_list">
+                        <li className="companies_header_filter_list__item" onClick={handleSortInfo} id="none">None</li>
+                        <li className="companies_header_filter_list__item" onClick={handleSortInfo} id="none">Name</li>
+                        <li className="companies_header_filter_list__item" onClick={handleSortInfo} id="none">Budget</li>
+                        <li className="companies_header_filter_list__item" onClick={handleSortInfo} id="none">Date</li>
+                    </ul>
+                </div>
+                <div className="companies_header_control">
+                    <button className="companies_header_control_btn">
+                        <img src={selectIcon} alt="iconButton" />
+                    </button>
+                    <button className="companies_header_control_btn btn_blue">
+                        <img src={plusIcon} alt="iconButton" />
+                        Add company
+                    </button>
+                </div>
+            </div> */
+
+.companies_header_filter {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+
+  align-items: center;
+
+  user-select: none;
+}
+
+.companies_header_filter h2 {
+  color: var(--Txt-secondary, #a4a4a4);
+  font-family: Nunito;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
+
+  margin: 0;
+}
+
+.companies_header_filter_list {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+
+  list-style-type: none;
+}
+
+.companies_header_filter_list__item {
+  color: var(--Txt-secondary, #a4a4a4);
+  font-family: Nunito;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
+
+  background-color: white !important;
+
+  cursor: pointer;
+}
+
+.companies_header_filter_list__item.selected {
+  color: var(--Accent, #4876f9);
+}
+
+.companies_header_filter_list__item:not(.selected):hover {
+  color: var(--Accent, #4877f97a);
+}
+
+.companies_header_control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+
+  user-select: none;
+}
+
+.companies_header_control_btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 8px;
+
+  box-sizing: content-box;
+  border-radius: 8px;
+  border: 1px solid var(--Btn-secondary-default, #e8e8e8);
+
+  cursor: pointer;
+
+  background-color: white;
+}
+
+.companies_header_control_btn.btn_blue {
+  padding: 12px 16px;
+  background: var(--Btn-primary-default, #4876f9);
+
+  border-color: #4876f9;
+
+  color: white;
+
+  color: var(--Txt-btn-primary, #fff);
+  text-align: center;
+  font-family: Nunito;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: 0.28px;
+}
+
+/* <div className="companies_body_item-header">
+                        <h2 className="companies_body_item-header__title">
+                            <img src={'https://static.vecteezy.com/system/resources/previews/014/018/568/original/yandex-logo-on-transparent-background-free-vector.jpg'} alt="company_icon" />
+                            {item.name}
+                            <span>{item.id}</span>
+                        </h2>
+                        <div className="companies_body_item-header--drop"></div>
+                    </div> */
+
+.companies_body_list {
+  display: flex;
+  flex-wrap: wrap; /* Разрешает перенос элементов на следующую строку */
+  justify-content: flex-start; /* Равномерно распределяет элементы по контейнеру */
+  align-items: flex-start; /* Выравнивает элементы по верхней части контейнера */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.companies_body_item {
+  width: calc((100% / 3) - 12px); /* Учитывает gap в 16px между элементами */
+  border-radius: var(--radius-8, 8px);
+  border: 1px solid var(--Stroke, #e8e8e8);
+  background: var(--BG-Input, #fff);
+  padding: 16px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.companies_body_item + .companies_body_item{
+  margin-left: 16px;
+}
+
+.companies_body_list + .companies_body_list {
+  margin-top: 16px;
+}
+
+.companies_body_item-header {
+  position: relative;
+}
+
+.companies_body_item-header__title {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+
+.companies_body_item-header__title img {
+  border-radius: 12.8px;
+  object-fit: cover;
+}
+
+.companies_body_item-header__title span {
+  color: var(--Txt-primary, #1c1c1c);
+  font-family: Nunito;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 100% */
+  letter-spacing: -0.2px;
+
+  margin: 0;
+
+  display: block;
+
+  width: 70%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.companies_body_item-header__title span span {
+  color: #7b7a81;
+
+  font-family: Nunito;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.14px;
+
+  margin: 0;
+  margin-top: 8px;
+}
+
+.companies_body_item-header .dropdown__container {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+}
+
+.companies_body_item-header .dropdown__content {
+  top: 28px;
+}
+
+.companies_body_item-analytic {
+  margin-top: 13px;
+  position: relative;
+
+  border-radius: 8px;
+  border: 1px solid var(--Stroke, #e8e8e8);
+  background: var(--light-bg, #fff);
+}
+
+.companies_body_item-analytic::before {
+  position: absolute;
+  top: -12px;
+  left: 0;
+
+  content: "";
+
+  width: 100%;
+  height: 1px;
+
+  background-color: #e8e8e8;
+}
+
+/* <div className="companies_body_item-analytic_balance"></div>
+                        <ul className="companies_body_item-analytic_list">
+                            <li className="companies_body_item-analytic_list--item"></li>
+                            <li className="companies_body_item-analytic_list--item"></li>
+                            <li className="companies_body_item-analytic_list--item"></li>
+                        </ul> */
+
+.companies_body_item-analytic_balance {
+  padding: 16px 20px;
+
+  border-bottom: 1px solid #e8e8e8;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.companies_body_item-analytic_balance > div {
+  width: 100%;
+}
+
+.companies_body_item-analytic_balance--graph {
+  height: 60px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.companies_body_item-analytic_balance--graph .small-linechart{
+  position: absolute;
+  top: 5%;
+  left: -5%;
+
+  width: 110%;
+  height: 110%;
+}
+
+.companies_body_item-analytic_list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 8px 0px;
+}
+
+.companies_body_item-analytic_list--item {
+  width: 100%;
+  padding: 0 12px;
+
+  position: relative;
+}
+
+.companies_body_item-analytic_list--item
+  + .companies_body_item-analytic_list--item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  content: "";
+
+  width: 1px;
+  height: 100%;
+
+  background-color: #e8e8e8;
+}
+
+.companies_body_item-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.companies_body_item-info_date {
+  color: var(--Txt-secondary, #a4a4a4);
+  font-family: Nunito;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+}
+
+.companies_body_item-info_link {
+  color: var(--Txt-accent, #4876f9);
+  text-align: right;
+  font-family: Nunito;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+  text-decoration-line: underline !important;
+  text-underline-offset: 3px;
+}
+
+
+/* <div className="empty_company">
+            <p>You don't have any companies yet, you need <br />to add a company to get started.</p>
+            <div className="image_empty"></div>
+          </div> */
+
+.empty_company{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
+  margin-top: 3vw;
+}
+
+.empty_company p{
+  color: var(--Txt-primary, #1c1c1ca2);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Nunito;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 100% */
+  letter-spacing: 0.38px;
+  text-align: center;
+}
+
+.empty_company .image_empty{
+  display: block;
+  width: 60vw;
+  height: 40vw;
+
+  background-image: url('../../../../assets/img/emptyCompanies.jpg');
+  background-position: center;
+  background-size: cover;
+
+  opacity: .75;
+
+  filter: blur(1px) grayscale(70%);
+
+  margin-top: 2vw;
+}
+
+.custom-confirm{
+  min-height: 232px !important;
+  height: fit-content !important;
+}

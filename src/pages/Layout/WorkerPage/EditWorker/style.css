@@ -1,0 +1,273 @@
+/* <div className="add_worker__container">
+      <div className="add_worker__container-form">
+        <div className=""></div>
+        <div className="">
+          <div className="inputs_row">
+            <div className="company_add_search__input">
+              <label htmlFor="inn_value" className="company_add_search__label">
+                First name
+                <input
+                  type="text"
+                  id="worker_name"
+                  className="company_add_search__input"
+                  onChange={handleDataChang1e}
+                  value={userInfo?.worker_name}
+                />
+              </label>
+            </div>
+            <div className="company_add_search__input">
+              <label htmlFor="inn_value" className="company_add_search__label">
+                Last name
+                <input
+                  type="text"
+                  id="worker_surname"
+                  className="company_add_search__input"
+                  onChange={handleDataChang1e}
+                  value={userInfo?.worker_surname}
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+        <div className=""></div>
+      </div>
+    </div> */
+
+.add_worker__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 100000;
+
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--BG-popup, rgba(150, 168, 201, 0.3));
+  backdrop-filter: blur(8px);
+}
+
+.add_worker__container-form {
+  border-radius: 12px;
+  background: var(--BG, #fff);
+
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  width: 750px;
+}
+
+/* .<div className="add_worker__container-form_title">
+<h1 className="add_worker__container-form_title-text">Add worker</h1>
+<div className="add_worker__container-form_title-close"></div>
+</div>
+<div className="add_worker__container-form_body"> */
+
+.add_worker__container-form_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add_worker__container-form_title-text {
+  color: var(--Txt-primary, #1c1c1c);
+  font-family: Nunito;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 26.4px */
+
+  margin: 0;
+}
+
+.add_worker__container-form_title-close {
+  width: 28px;
+  height: 28px;
+
+  background-image: url("../../../../assets/img/Close.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  cursor: pointer;
+}
+
+/* <div className="inputs_row">
+            <div className="company_add_search__input_select">
+              <input
+                type="file"
+                accept="image"
+                name="photo" // Укажите имя поля как 'photo'
+                style={{ display: "none" }}
+                ref={fileInput}
+                onChange={handleFileChange}
+              />
+              <div
+                onClick={() => fileInput.current.click()}
+                className="company_add_search__input_preview"
+              >
+                <img
+                  width={40}
+                  height={40}
+                  src={imagePreview}
+                  alt="Preview"
+                  style={{ maxWidth: "100px" }}
+                />
+              </div>
+            </div>
+            <h1>Profile photo <span>Click upload profile photo. Allowed file types: png, jpg, jpeg</span></h1>
+          </div> */
+
+.inputs_row:has(h1) {
+  border-radius: 12px;
+  background: var(--BG-menu-nav, #f9fafb);
+
+  padding: 16px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  margin-top: 16px;
+}
+
+.inputs_row .company_add_search__input_preview {
+  width: 24px;
+  height: 24px;
+
+  padding: 8px;
+
+  box-sizing: content-box;
+
+  border: 1px solid #4876f9;
+
+  transition: none;
+}
+
+.inputs_row .company_add_search__input_preview:has(> .active) {
+  width: 40px;
+  height: 40px;
+
+  padding: 0;
+}
+
+.inputs_row .company_add_search__input_preview .active {
+  width: 40px;
+  height: 40px;
+}
+
+.inputs_row > h1 {
+  color: var(--Txt-secondary, #a4a4a4);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Nunito;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 133.333% */
+
+  margin: 0;
+}
+
+.inputs_row > h1 > span {
+  display: block;
+
+  color: var(--Txt-accent, #4876f9);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Nunito;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+
+  margin-top: 4px;
+}
+
+.add_worker__container-form .company_add_search__input {
+  margin-top: 16px;
+}
+
+.add_worker__container-form .company_add_search__input input::placeholder {
+  color: var(--Txt-secondary, #a4a4a4);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Nunito;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+}
+
+.add_worker__container-form_controls {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.add_worker__container-form_controls button {
+  width: 120px;
+}
+
+.add_worker__container-form_body > .department_select {
+  width: 100%;
+  background-color: white !important;
+
+  padding: 0 !important;
+  margin-top: 16px;
+}
+
+.add_worker__container-form_body > .department_select > label {
+  width: 100%;
+  padding-left: 28px;
+
+  background-color: white !important;
+  border: none !important;
+  background-image: none !important;
+
+  line-height: 20px;
+}
+
+.add_worker__container-form_body > .department_select > label::before {
+  display: block;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  box-sizing: content-box;
+  cursor: pointer;
+  margin: 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  content: "";
+
+  box-sizing: border-box;
+}
+
+.add_worker__container-form_body
+  > .department_select
+  > input:checked
+  + label::before {
+  border: 1px solid #4876f9;
+  background-color: #4876f9;
+}
+
+
+.rdp-day_selected.rdp-day:hover {
+  background-color: #376af8eb !important;
+  opacity: 1 !important;
+}

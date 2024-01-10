@@ -1,0 +1,119 @@
+._chart-wrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+
+
+    background-color: rgba(196, 196, 196, 0.3);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 6;
+}
+
+._chart-add-form{
+    width: 510px;
+    margin: 0 auto;
+
+    background-color: white;
+    border-radius: 30px;
+
+    padding: 80px 30px 40px 30px;
+    box-sizing: content-box;
+
+    position: relative;
+
+}
+
+._close-btn{
+    position: absolute;
+
+    right: 20px;
+    top: 20px;
+
+    width: 30px;
+    height: 30px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://img.icons8.com/?size=512&id=82771&format=png');
+
+    opacity: .65;
+
+    transition: opacity .15s ease-in-out;
+}
+
+._close-btn:hover{
+    opacity: .8;
+}
+
+._chart-add-header{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+._chart-add-inuts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+._chart-add-controls{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+._chart-add-radio{
+    margin-top: 20px;
+}
+
+._chart-add-suggetions{
+    margin-top: 30px;
+    width: 100%;
+}
+
+._chart-add-subtitle{
+    font-size: 16px;
+    margin: 0;
+
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+._chart-add-list{
+    margin: 0;
+    padding: 0;
+    padding-right: 13px;
+    box-sizing: border-box;
+
+    max-height: 260px;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+._chart-add-button{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.rs-notification-description > p{
+    white-space: pre-wrap;
+}

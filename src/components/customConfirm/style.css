@@ -1,0 +1,142 @@
+/* <div className="custom-confirm">
+      <div className="confirm-header">
+        <img className='confirm-image' src={`../../assets/img/${status}.svg`} alt="icon" />
+        <p className='confirm-title'>{title}</p>
+
+        <div className='close_btn' onClick={handleCancel}></div>
+      </div>
+      <div className="confirm-message">{message}</div>
+      <div className="confirm-buttons">
+        <button className='confirm-button' onClick={handleCancel}>Cancel</button>
+        <button className='confirm-button blue' onClick={handleConfirm}>{yesText}</button>
+      </div>
+    </div> */
+
+.confirm_container_center{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--bg-popup, rgba(150, 168, 201, 0.30));
+    backdrop-filter: blur(6px);
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1000000000;
+}
+
+.custom-confirm{
+    width: 780px;
+    height: 232px;
+
+    background-color: white;
+    border-radius: 12px;
+
+    padding: 40px;
+}
+
+
+.confirm-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.confirm-image{
+    width: 24px;
+    height: 24px;
+}
+
+.confirm-title{
+    color: var(--txt-primary, #1C1C1C);
+    font-family: 'Nunito';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%; /* 26.4px */
+
+}
+
+.confirm-header .close_btn{
+    width: 28px;
+    height: 28px;
+
+    cursor: pointer;
+    user-select: none;
+    
+
+    background-image: url('../../assets/img/Close.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin-left: auto;
+}
+
+
+.confirm-message{
+    color: var(--txt-primary, #1C1C1C);
+    font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
+    font-family: 'Nunito';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+
+    margin-top: 22px;
+}
+
+
+.confirm-buttons{
+    margin-top: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.confirm-button{
+    width: 175px;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--txt-primary, #1C1C1C);
+    text-align: center;
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: 0.28px;
+
+    border-radius: 8px;
+    border: 1px solid var(--btn-secondary-default, #E8E8E8);
+
+    cursor: pointer;
+    user-select: none;
+
+    background-color: white;
+}
+
+
+.confirm-button.blue{
+    background: var(--btn-primary-default, #4876F9);
+    border: 1px solid var(--btn-secondary-default, #4876F9);
+
+    color: white;
+}
+
+
+.confirm-button:hover{
+    border-color: #d6d6d6;
+    opacity: .8;
+}

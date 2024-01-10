@@ -1,0 +1,13 @@
+.rect {
+    padding: 12px;
+    opacity: 0;
+} 
+.bar-current .rect {
+    opacity: 1;
+} 
+.bar-active .rect {
+    opacity: 1;
+} 
+.bar:hover .rect{
+    opacity: 1;
+}

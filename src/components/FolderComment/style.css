@@ -1,0 +1,93 @@
+/* <div className='comment_body'>
+      <div className='comment_body-header'>
+        <p className='comment_body-title'></p>
+        <img src={closeIcon} alt="icon" onClick={handleClose}/>
+      </div>
+      <textarea id="comment" onChange={handleChange} value={text}></textarea>
+      {lastEdit && <p className='comment_body-edit'>Last change: {moment(lastEdit).format('HH:mm, DD.MM.YYYY')}</p>}
+    </div> */
+.comment_container{
+    width: 100%;
+    height: 100vh;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: var(--bg-popup, rgba(150, 168, 201, 0.30));
+    backdrop-filter: blur(6px);
+}
+
+.comment_body{
+    width: 600px;
+    height: calc(100vh - 88px);
+
+    position: absolute;
+    top: 44px;
+    right: 44px;
+
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column; 
+    gap: 12px;
+
+    border-radius: 12px;
+    background: var(--bg-input, #FFF);
+    box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.10);
+
+
+}
+
+
+
+.comment_body-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.comment_body-header > p{
+    color: var(--txt-primary, #1C1C1C);
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.5px;
+
+}
+
+
+
+#comment{
+    border-radius: 8px;
+    border: 1px solid var(--stroke, #E8E8E8);
+    padding: 12px;
+
+    height: 100%;
+
+    color: var(--txt-secondary, #A4A4A4);
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: 0.5px;
+
+    resize: none
+}
+
+
+.comment_body-edit{
+    color: var(--txt-secondary, #A4A4A4);
+    font-family: Nunito;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: 0.5px;
+
+}

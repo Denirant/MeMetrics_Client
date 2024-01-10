@@ -1,0 +1,55 @@
+.photo-input {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .photo-input input{
+    display: none;
+  }
+  
+  .photo-preview {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .photo-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .empty-photo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .remove-photo {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 16px 10px 16px;
+    background-color: #ffffff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    border: 1px solid black;
+    
+    transition: background-color .15s ease-in-out;
+  }
+  
+  .remove-photo:hover {
+    background-color: #e9e9e9;
+  }
+  

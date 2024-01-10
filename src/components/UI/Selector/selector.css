@@ -1,0 +1,38 @@
+/* <div className="selector_container" onClick={handleSelect}>
+            <div className={`selector_check ${(status) ? 'selector_check__active' : ''}`}></div>
+            <p className='selector_text'>{text}</p>
+        </div> */
+
+.selector_container{
+    width: 100%;
+    padding: 10px 22px;
+
+    box-sizing: border-box;
+
+    border-radius: 20px;
+    border: 1px solid rgb(234, 234, 234);
+}
+
+
+.selector_check{
+    width: 28px;
+    height: 28px;
+
+    border: 1px solid rgba(171, 207, 239, 0.731);
+    border-radius: 6px;
+
+    background-color: white;
+}
+
+.selector_check.selector_check__active{
+    background-color: rgba(174, 203, 228, 0.906);
+
+    background-image: url('https://img.icons8.com/?size=512&id=98955&format=png');
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+}
+
+.selector_container.selector_container__active{
+    border: 1px solid rgba(171, 207, 239, 0.731);
+}
